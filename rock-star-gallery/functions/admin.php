@@ -32,21 +32,13 @@ function my_admin_stylesheet() { ?>
 	<link rel="stylesheet"  href="<?php echo get_bloginfo('template_url').'/css/wp-admin.css'; ?>" />
 <?php }
 
-/*==============================================================================
-Custom Admin Footer
-==============================================================================*/
-
-add_filter('admin_footer_text', 'modify_footer_admin');
-function modify_footer_admin () {
-	echo 'Theme by <a href="http://thefirmgraphics.com" target="_blank">The Firm Graphics<img id="tfg-icon" src="'.get_bloginfo('template_url').'/img/admin/tfg-icon.png" /></a> ';
-}
 
 /*==============================================================================
 Custom Admin Favicon
 ==============================================================================*/
 
 function admin_favicon() {
-	echo '<link rel="shortcut icon" type="image/x-icon" href="'.get_bloginfo('template_url').'/img/favicon.ico?v=1" />';
+	echo '<link rel="shortcut icon" type="image/x-icon" href="'.get_bloginfo('template_url').'/favicon.ico?v=1" />';
 }
 
 add_action('admin_head', 'admin_favicon');
@@ -66,7 +58,7 @@ $current_user = wp_get_current_user();
 if( !in_array( $current_user->user_login, $admin_usernames ) ) {
 	add_action('admin_enqueue_scripts', 'nav_hide_stylesheet');
 	function nav_hide_stylesheet() { ?>
-		<style>
+		<!-- <style>
 			#menu-dashboard ul,
 			/*#menu-appearance,*/
 			#menu-plugins,
@@ -88,7 +80,7 @@ if( !in_array( $current_user->user_login, $admin_usernames ) ) {
 			#menu-posts-instagram_photo {
 				display: none;
 			}
-		</style>
+		</style> -->
 	<?php }
 
 	add_action('admin_menu','wphidenag');

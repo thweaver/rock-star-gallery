@@ -5,7 +5,7 @@ Gulp
 var gulp = require( 'gulp' ),
 	gulpLoadPlugins = require( 'gulp-load-plugins' ),
 	p = gulpLoadPlugins(),
-	dest = 'build/';
+	dest = 'rock-star-gallery/';
 
 function handleError( err ) {
 	console.log( err.toString() );
