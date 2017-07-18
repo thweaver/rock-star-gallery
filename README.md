@@ -1,1 +1,1 @@
-# rock-star-gallery
+# Rock Star Gallery
