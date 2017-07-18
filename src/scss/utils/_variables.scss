@@ -1,0 +1,57 @@
+/**********************
+Breakpoints 
+***********************/
+
+$bp-xl: 1824px;
+$bp-large: 1300px;
+$bp-laptop: 1024px;
+$bp-tablet: 768px;
+$bp-mobile: 568px;
+$bp-small: 480px;
+$bp-xs: 320px;
+
+/**********************
+Colors
+***********************/
+
+$bright-red : #bc0000;
+$red : #800000;
+$dark-red : #5c0000;
+$gold : #debf35;
+$light-grey : #c0c0c0;
+$grey : #3d3d3d;
+$white : #dedede;
+$dark-grey : #292929;
+
+
+/**********************
+Color Usage
+***********************/
+
+
+/**********************
+Font Family
+***********************/
+
+$font-family: 'Oswald', sans-serif;
+
+/**********************
+Font Weights
+***********************/
+
+$font-light: 400;
+$font-regular: 400;
+$font-bold: 700;
+
+/**********************
+Font Size
+***********************/
+
+$browser-context: 16; 
+$font-small: em(14);
+$font-default: em(16);
+$font-copy: em(20);
+$font-medium: em(24);
+$font-large: em(36);
+$font-xl: em(40);
+$font-xxl: em(43);

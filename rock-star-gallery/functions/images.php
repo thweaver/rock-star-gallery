@@ -13,8 +13,8 @@ Image Sizes
 ==============================================================================*/
 
 if( function_exists( 'add_image_size' ) ) {
-	add_image_size( 'med', 600, 600, true );
-	add_image_size( 'lrg', 1200, 300, true );
+	add_image_size( 'feature', 600, 375, true );
+	add_image_size( 'full', 1200, 1200 );
 }
 
 /*==============================================================================
