@@ -28,6 +28,14 @@ $dark-grey : #292929;
 Color Usage
 ***********************/
 
+$site-bg : $dark-grey;
+$nav-bg : $light-grey;
+$border-color : $red;
+$text-color : $dark-grey;
+$input-bg : $white;
+$input-border : #afafaf;
+$input-text : #808080;
+$link-color : $border-color;
 
 /**********************
 Font Family
@@ -50,8 +58,9 @@ Font Size
 $browser-context: 16; 
 $font-small: em(14);
 $font-default: em(16);
-$font-copy: em(20);
+$font-copy: em(18);
 $font-medium: em(24);
 $font-large: em(36);
 $font-xl: em(40);
 $font-xxl: em(43);
+

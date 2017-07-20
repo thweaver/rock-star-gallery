@@ -13,4 +13,21 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class( 'page-' . $post->post_name ); ?>>
-
+	<nav class="main-nav">
+		<ul>
+			<li>
+				<a href="#" class="site-logo">
+					<?php include 'img/logo-rockstar.svg' ?>
+				</a>
+			</li>
+			<li><a href="#" class="main-nav-item">CELEBRITY ARTISTS</a></li>
+			<li><a href="#" class="main-nav-item">Fine Photography</a></li>
+			<li><a href="#" class="main-nav-item">Collectibles</a></li>
+		</ul>
+		<form class="search-bar">
+			<div class="search-input">
+				<input type="text" class="search-text" />
+				<?php include 'img/icon-search.svg' ?>
+			</div>
+		</form>
+	</nav>

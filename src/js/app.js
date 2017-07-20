@@ -6,7 +6,9 @@ FastClick.attach(document.body);
 
 var 
 	html = $('html'),
-	win = $( window );
+	win = $( window ),
+	searchContainer = $('.search-input'),
+	searchInput = $('.search-text');
 
 ///////// Retina Class
 
@@ -21,6 +23,15 @@ if (window.matchMedia) {
 
 win.on( 'load', function() {
 	html.addClass( 'loaded' );
+});
+
+///////// Search Input
+
+searchInput.on('focus', function(){
+  searchContainer.addClass('search-focus');
+});
+searchInput.on('blur', function(){
+  searchContainer.removeClass('search-focus');
 });
 
 
