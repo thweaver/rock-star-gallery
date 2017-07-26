@@ -8,13 +8,27 @@ Main Nav
 	border-top: solid 5px $border-color;
 	height: em(95);
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	@media (max-width: $bp-desktop) {
+		font-size: 90%;
+	}
 }
-.main-nav ul {
+.nav-flex {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+	height: 100%;
+	justify-content: space-between;
+	@media (max-width: $bp-laptop) {
+		display: none;
+	}
+}
+.nav-flex ul {
 	height: 100%;
 	display: flex;
+	justify-self: flex-start;
 	padding: 0;
+	margin: 0;
 	li {
 		height: 100%;
 		list-style: none;
@@ -24,7 +38,7 @@ Main Nav
 			display: flex;
 			align-items: center;
 			height: 100%;
-			padding: 0 25px;
+			padding: 0 em(25);
 			background: rgba(255,255,255,0);
 			transition: color .2s;
 		}
@@ -52,9 +66,9 @@ Main Nav
 	letter-spacing: -0.025em;
 	&:after {
 		content: '';
-		width: 14px;
+		width: em(14);
 		height: 100%;
-		margin-left: 10px;
+		margin-left: em(10);
 		background: url(../img/icon-down-arrow.svg);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -66,8 +80,27 @@ Main Nav
 			transform: rotate(180deg);
 		}
 	}
+	@media (max-width: $bp-laptop) {
+		&:after {
+			display: none;
+		}
+	}
 }
 .site-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 0 em(25);
+	&:after {
+		content: '';
+		width: 1px;
+		background: rgba(255,255,255,0.2);
+		border-right: solid 1px rgba(0,0,0,0.2);
+		height: 100%;
+		transition: all .2s;
+		transform: translateX(em(25));
+	}
 	svg {
 		height: 75%;
 		width: auto;
@@ -76,11 +109,13 @@ Main Nav
 		will-change: transform;
 	}
 	&:hover {
+		background: rgba(255,255,255,0.2);
 		svg {
 			transform: scale(0.9);
 		}
 	}
 }
+
 
 /************************************************
 Search Bar
@@ -90,7 +125,7 @@ Search Bar
 	height: 100%;
 	display: flex;
 	align-items: center;
-	padding-right: 25px;
+	padding-right: em(25);
 	&:before {
 		content: '';
 		width: 1px;
@@ -98,18 +133,19 @@ Search Bar
 		border-right: solid 1px rgba(0,0,0,0.2);
 		height: 100%;
 	}
+	
 }
 .search-input {
-	height: 40px;
+	height: em(40);
 	position: relative;
-	padding-left: 25px;
+	padding-left: em(25);
 	input[type=text] {
 		outline: none;
-		height: 40px;
-		width: 280px;
+		height: 100%;
+		width: em(280);
 		background: $input-bg;
 		border: solid 1px $input-border;
-		padding: 0 35px 0 10px;
+		padding: 0 em(35) 0 em(10);
 		color: $input-text;
 		font-size: $font-small;
 		transition: all .3s;
@@ -119,13 +155,13 @@ Search Bar
 	}
 	svg {
 		position: absolute;
-		width: 18px;
-		height: 25px;
+		width: em(18);
+		height: em(25);
 		display: block;
 		top: 0;
 		bottom: 0;
 		margin: auto;
-		right: 15px;
+		right: em(15);
 		path {
 			fill: $dark-red;
 			transition: fill .3s;
@@ -134,6 +170,139 @@ Search Bar
 	&.search-focus {
 		svg path {
 			fill: $light-grey;
+		}
+	}
+}
+
+/************************************************
+Secondary Nav
+************************************************/
+
+.secondary-nav {
+	width: 100%;
+	background-color: $secondary-nav-bg;
+	border-bottom: solid 3px $grey;
+	height: em(50);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	@media (max-width: $bp-laptop) {
+		display: none;
+	}
+}
+.secondary-nav-list {
+	height: 100%;
+	display: flex;
+	padding: 0;
+	padding-left: em(15);
+	li {
+		height: 100%;
+		list-style: none;
+		display: flex;
+		transition: background .4s;
+		a {
+			display: flex;
+			align-items: center;
+			height: 100%;
+			padding: 0 em(20);
+			background: rgba(255,255,255,0);
+			transition: color .2s;
+		}
+		&:hover {
+			background: $grey;
+			a {
+				color: white;
+			}
+		}
+	}
+}
+.secondary-nav-item {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $light-grey;
+	font-size: $font-small;
+}
+
+
+/************************************************
+Social Nav
+************************************************/
+
+.social-nav {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	list-style: none;
+	li {
+		height: 100%;
+		list-style: none;
+		display: flex;
+		transition: background .4s;
+	}
+}
+.newsletter-btn {
+	height: 100%;
+	background-color: $grey;
+	padding: 0 em(25);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: em(325);
+	margin-left: em(10);
+	span {
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $light-grey;
+		font-size: $font-small;
+		transition: all .3s;
+	}
+	svg {
+		height: em(18);
+		width: auto;
+		display: block;
+		transition: all .3s;
+		path {
+			fill: $light-grey;
+			transition: fill .3s;
+		}
+	}
+	&:hover {
+		span {
+			transform: translateX(5px);
+			color: $gold;
+		}
+		svg {
+			transform: translateX(-5px);
+			path {
+				fill: $gold;
+			}
+		}
+	}
+}
+.social-icon {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 0 em(12);
+	svg {
+		height: em(18);
+		width: auto;
+		display: block;
+		transition: all .3s;
+		path {
+			fill: $social-icon-fill;
+			transition: fill .3s;
+		}
+	}
+	&:hover {
+		svg {
+			transform: scale(0.8);
+			path {
+				fill: white;
+			}
 		}
 	}
 }

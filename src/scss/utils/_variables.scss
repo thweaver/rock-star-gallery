@@ -4,7 +4,8 @@ Breakpoints
 
 $bp-xl: 1824px;
 $bp-large: 1300px;
-$bp-laptop: 1024px;
+$bp-desktop: 1100px;
+$bp-laptop: 950px;
 $bp-tablet: 768px;
 $bp-mobile: 568px;
 $bp-small: 480px;
@@ -36,6 +37,8 @@ $input-bg : $white;
 $input-border : #afafaf;
 $input-text : #808080;
 $link-color : $border-color;
+$secondary-nav-bg : $dark-grey;
+$social-icon-fill : $gold;
 
 /**********************
 Font Family
