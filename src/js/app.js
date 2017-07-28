@@ -8,6 +8,7 @@ var
 	html = $('html'),
 	win = $( window ),
 	searchContainer = $('.search-input'),
+	hamburger = $('.hamburger'),
 	searchInput = $('.search-text');
 
 ///////// Retina Class
@@ -32,6 +33,13 @@ searchInput.on('focus', function(){
 });
 searchInput.on('blur', function(){
   searchContainer.removeClass('search-focus');
+});
+
+///////// Hamburger
+
+hamburger.click(function(e){
+	e.preventDefault();
+	html.toggleClass('js-nav-open');
 });
 
 
