@@ -14,11 +14,12 @@
   'base/typography',
   'base/shame';
 
-// @import
-// 'layout/***';
+@import
+	'layout/layout';
 
 @import
-	'modules/nav';
+	'modules/nav',
+	'modules/hero';
 
 // @import
 // 'pages/***';

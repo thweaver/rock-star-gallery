@@ -30,6 +30,7 @@ header {
 		background: none;
 		position: absolute;
 		top: 0;
+		z-index: 4;
 		&:before {
 			display: block;
 		}
@@ -514,7 +515,7 @@ Hamburger
 .hamburger {
 	display: none;
 	position: absolute;
-	top: em(18);
+	top: em(20);
 	right: 0;
 	margin: auto;
 	z-index: 4;

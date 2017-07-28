@@ -1,0 +1,66 @@
+.hero {
+	width: 100%;
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(../img/temp/temp-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	&:before {
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+		position: absolute;
+		background: url(../img/pattern-sqaures.png);
+		content: '';
+		opacity: 0.5;
+	}
+	@media (max-width: $bp-laptop) {
+		height: 300px;
+	}
+}
+.hero h2 {
+	text-align: center;
+	font-size: 125%;
+	position: relative;
+	z-index: 3;
+	span {
+		&:first-of-type {
+			font-size: em(12);
+			letter-spacing: 1em;
+			text-transform: uppercase;
+			color: white;
+			display: block;
+			margin-bottom: 10px;
+			font-weight: $font-regular;
+		}
+		&:nth-of-type(2) {
+			font-size: em(100);
+			letter-spacing: -0.05em;
+			text-transform: uppercase;
+			color: $gold;
+			display: block;
+			margin-bottom: 10px;
+		}
+		&:last-of-type {
+			font-size: $font-medium;
+			letter-spacing: 1em;
+			text-transform: lowercase;
+			color: white;
+			display: block;
+			margin-bottom: 15px;
+			font-weight: $font-regular;
+		}
+	}
+	@media (max-width: $bp-laptop) {
+		font-size: 90%;
+	}
+	@media (max-width: $bp-mobile) {
+		font-size: 80%;
+		span:nth-of-type(2) {
+			font-size: em(80);
+		}
+	}
+}

@@ -1,0 +1,7 @@
+.wrapper {
+	padding-top: em(50);
+	width: 100%;
+	@media (max-width: $bp-laptop) {
+		padding-top: em(90);
+	}
+}

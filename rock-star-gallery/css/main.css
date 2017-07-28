@@ -531,6 +531,16 @@ a {
   margin: auto;
 }
 
+.wrapper {
+  padding-top: 3.125em;
+  width: 100%;
+}
+@media (max-width: 950px) {
+  .wrapper {
+    padding-top: 5.625em;
+  }
+}
+
 /************************************************
 Main Nav
 ************************************************/
@@ -566,6 +576,7 @@ header:before {
     background: none;
     position: absolute;
     top: 0;
+    z-index: 4;
   }
   header:before {
     display: block;
@@ -1070,7 +1081,7 @@ Hamburger
 .hamburger {
   display: none;
   position: absolute;
-  top: 1.125em;
+  top: 1.25em;
   right: 0;
   margin: auto;
   z-index: 4;
@@ -1132,4 +1143,76 @@ Hamburger
   right: -3px;
   transform: rotate(-45deg);
   background-color: #800000;
+}
+
+.hero {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../img/temp/temp-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.hero:before {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  background: url(../img/pattern-sqaures.png);
+  content: '';
+  opacity: 0.5;
+}
+@media (max-width: 950px) {
+  .hero {
+    height: 300px;
+  }
+}
+
+.hero h2 {
+  text-align: center;
+  font-size: 125%;
+  position: relative;
+  z-index: 3;
+}
+.hero h2 span:first-of-type {
+  font-size: 0.75em;
+  letter-spacing: 1em;
+  text-transform: uppercase;
+  color: white;
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+.hero h2 span:nth-of-type(2) {
+  font-size: 6.25em;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #debf35;
+  display: block;
+  margin-bottom: 10px;
+}
+.hero h2 span:last-of-type {
+  font-size: 1.5em;
+  letter-spacing: 1em;
+  text-transform: lowercase;
+  color: white;
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+@media (max-width: 950px) {
+  .hero h2 {
+    font-size: 90%;
+  }
+}
+@media (max-width: 568px) {
+  .hero h2 {
+    font-size: 80%;
+  }
+  .hero h2 span:nth-of-type(2) {
+    font-size: 5em;
+  }
 }
