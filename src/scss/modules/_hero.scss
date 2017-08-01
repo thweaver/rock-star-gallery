@@ -1,6 +1,5 @@
 .hero {
 	width: 100%;
-	height: 500px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -8,6 +7,7 @@
 	background-position: center;
 	background-size: cover;
 	position: relative;
+	flex-direction: column;
 	&:before {
 		width: 100%;
 		height: 100%;
@@ -17,8 +17,14 @@
 		content: '';
 		opacity: 0.5;
 	}
+	div {
+		z-index: 3;
+	}
 	@media (max-width: $bp-laptop) {
-		height: 300px;
+		font-size: 90%;
+	}
+	@media (max-width: $bp-mobile) {
+		font-size: 70%;
 	}
 }
 .hero h2 {
@@ -54,13 +60,52 @@
 			font-weight: $font-regular;
 		}
 	}
-	@media (max-width: $bp-laptop) {
-		font-size: 90%;
-	}
 	@media (max-width: $bp-mobile) {
-		font-size: 80%;
 		span:nth-of-type(2) {
 			font-size: em(80);
+		}
+	}
+}
+.hero-brand {
+	padding: em(95) 0;
+}
+.hero-contact {
+	display: flex;
+	padding: em(15) 0;
+	border-top: solid 1px $light-grey;
+	border-bottom: solid 1px $light-grey;
+	margin-top: em(30);
+	align-items: center;
+	justify-content: center;
+	color: $light-grey;
+	font-size: $font-copy;
+}
+.hero-contact-block {
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	color: $light-grey;
+	font-size: $font-copy;
+	margin: 0 em(15);
+	svg {
+		display: block;
+		width: auto;
+		height: em(17);
+		path {
+			fill: $gold;
+			transition: fill .3s;
+		}
+	}
+	span {
+		margin-left: em(10);
+		transition: color .3s;
+	}
+	.no-touch &:hover {
+		span {
+			color: $white;
+		}
+		path {
+			fill: $white;
 		}
 	}
 }

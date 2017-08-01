@@ -18,7 +18,11 @@
 	'layout/layout';
 
 @import
+  'plugins/flickity';
+
+@import
 	'modules/nav',
+  'modules/featured-artists',
 	'modules/hero';
 
 // @import

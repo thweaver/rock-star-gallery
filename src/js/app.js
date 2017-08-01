@@ -42,5 +42,27 @@ hamburger.click(function(e){
 	html.toggleClass('js-nav-open');
 });
 
+//////// Flickity
+
+var flickityGallery = $( '.featured-artists' );
+
+flickityGallery.flickity({
+	cellAlign: 'center',
+	autoPlay: 4000,
+	imagesLoaded: true,
+	wrapAround: true,
+	pageDots: false,
+	resize: false,
+	prevNextButtons: true
+});
+
+var flickityGalleryData = flickityGallery.data( 'flickity' );
+
+win.on( 'resize', function() {
+	if( flickityGalleryData ) {
+		flickityGalleryData.resize();
+	}
+});
+
 
 }); // jQuery
