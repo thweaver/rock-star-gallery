@@ -7,7 +7,7 @@
 	width: em(300);
 	height: em(190);
 	position: relative;
-	margin: em(15) em(7);
+	margin: em(15) em(7	);
 	display: block;
 	overflow: hidden;
 	img {
@@ -16,7 +16,7 @@
 		display: block;
 		transition: transform 3s;
 	}
-	h3 {
+	h2 {
 		position: absolute;
 		bottom: 0;
 		left: 0;

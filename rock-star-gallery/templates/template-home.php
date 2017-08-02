@@ -1,6 +1,8 @@
 <?php /* Template Name: Home Template */ ?>
 
 <?php get_header(); ?>
+
+	<!-- Hero -->
 	<div class="hero">
 		<div class="hero-brand">
 			<h2>
@@ -19,59 +21,70 @@
 				</a>
 			</div>
 		</div>
+		
+		<!-- Featured Artists -->
 		<div class="featured-artists">
 			<a href="#" class="featured-artist">
-				<h3><span>Sebastian Kreuger</span></h3>
+				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 			</a>
 			<a href="#" class="featured-artist">
-				<h3><span>Sebastian Kreuger</span></h3>
+				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 			</a>
 			<a href="#" class="featured-artist">
-				<h3><span>Sebastian Kreuger</span></h3>
+				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 			</a>
 			<a href="#" class="featured-artist">
-				<h3><span>Sebastian Kreuger</span></h3>
+				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 			</a>
 			<a href="#" class="featured-artist">
-				<h3><span>Sebastian Kreuger</span></h3>
+				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 			</a>
 			<a href="#" class="featured-artist">
-				<h3><span>Sebastian Kreuger</span></h3>
+				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 			</a>
 			<a href="#" class="featured-artist">
-				<h3><span>Sebastian Kreuger</span></h3>
+				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 			</a>
 			<a href="#" class="featured-artist">
-				<h3><span>Sebastian Kreuger</span></h3>
+				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 			</a>
 			<a href="#" class="featured-artist">
-				<h3><span>Sebastian Kreuger</span></h3>
+				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 			</a>
 			<a href="#" class="featured-artist">
-				<h3><span>Sebastian Kreuger</span></h3>
+				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 			</a>
 			<a href="#" class="featured-artist">
-				<h3><span>Sebastian Kreuger</span></h3>
+				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 			</a>
 			<a href="#" class="featured-artist">
-				<h3><span>Sebastian Kreuger</span></h3>
+				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 			</a>
 			<a href="#" class="featured-artist">
-				<h3><span>Sebastian Kreuger</span></h3>
+				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 			</a>
+		</div>
+	</div>
+
+	<!-- Whats New -->
+	<div class="page-title-container">
+		<div class="page-title">
+			<h3>
+				<span>Whats New</span>
+			</h3>
 		</div>
 	</div>
 <?php get_footer(); ?>

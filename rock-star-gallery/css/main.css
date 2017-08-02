@@ -17,7 +17,7 @@ Font Weights
 /**********************
 Font Size
 ***********************/
-.hamburger-icon span:before, .hamburger-icon span:after {
+.hamburger-icon span:before, .hamburger-icon span:after, .page-title:before, .page-title:after, .page-title h3:before {
   display: block;
   content: '';
   position: absolute;
@@ -1344,7 +1344,7 @@ Hamburger
   display: block;
   transition: transform 3s;
 }
-.featured-artist h3 {
+.featured-artist h2 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1356,7 +1356,7 @@ Hamburger
   margin: 0;
   transition: background .5s;
 }
-.featured-artist h3 span {
+.featured-artist h2 span {
   color: white;
   font-size: 1.125em;
   font-weight: 400;
@@ -1368,6 +1368,72 @@ Hamburger
 .featured-artist:hover img {
   transform: scale(2);
   transition: transform 5s;
+}
+
+.page-title-container {
+  width: 100%;
+  background-color: #292929;
+  border-top: solid 5px black;
+  border-bottom: solid 5px black;
+  padding: 1.5625em;
+}
+
+.page-title {
+  width: 90%;
+  max-width: 53.75em;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+}
+.page-title:before {
+  width: 100%;
+  height: 1px;
+  background-color: #3d3d3d;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transform: translateY(-5px);
+}
+.page-title:after {
+  width: 75%;
+  height: 1px;
+  background-color: #3d3d3d;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(5px);
+}
+.page-title h3 {
+  padding: 0 1.5625em;
+  background-color: #292929;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  min-height: 4.375em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.page-title h3:before {
+  width: 4.375em;
+  height: 4.375em;
+  border: solid 5px #5b5b5b;
+  border-radius: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.page-title h3 span {
+  color: #dedede;
+  font-size: 1.5em;
+  position: relative;
+  z-index: 3;
+  font-weight: 400;
 }
 
 .hero {
@@ -1404,13 +1470,13 @@ Hamburger
   }
 }
 
-.hero h2 {
+.hero-brand h2 {
   text-align: center;
   font-size: 125%;
   position: relative;
   z-index: 3;
 }
-.hero h2 span:first-of-type {
+.hero-brand h2 span:first-of-type {
   font-size: 0.75em;
   letter-spacing: 1em;
   text-transform: uppercase;
@@ -1419,7 +1485,7 @@ Hamburger
   margin-bottom: 10px;
   font-weight: 400;
 }
-.hero h2 span:nth-of-type(2) {
+.hero-brand h2 span:nth-of-type(2) {
   font-size: 6.25em;
   letter-spacing: -0.05em;
   text-transform: uppercase;
@@ -1427,7 +1493,7 @@ Hamburger
   display: block;
   margin-bottom: 10px;
 }
-.hero h2 span:last-of-type {
+.hero-brand h2 span:last-of-type {
   font-size: 1.5em;
   letter-spacing: 1em;
   text-transform: lowercase;
@@ -1437,7 +1503,7 @@ Hamburger
   font-weight: 400;
 }
 @media (max-width: 568px) {
-  .hero h2 span:nth-of-type(2) {
+  .hero-brand h2 span:nth-of-type(2) {
     font-size: 5em;
   }
 }
