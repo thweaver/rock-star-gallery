@@ -1,9 +1,14 @@
 .page-title-container {
 	width: 100%;
 	background-color: $title-bg;
-	border-top: solid 5px black;
 	border-bottom: solid 5px black;
 	padding: em(25);
+	@media (max-width: $bp-laptop) {
+		font-size: 90%;
+	}
+	@media (max-width: $bp-mobile) {
+		font-size: 70%;
+	}
 }
 .page-title {
 	width: 90%;
@@ -40,7 +45,7 @@
 		z-index: 2;
 		text-align: center;
 		min-height: em(70);
-		display: flex;
+		display: inline-flex;
 		align-items: center;
 		justify-content: center;
 		margin: 0;

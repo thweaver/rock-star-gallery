@@ -503,6 +503,22 @@ a {
   transition: color .3s;
 }
 
+p {
+  line-height: 1.3;
+}
+
+.callout {
+  font-size: 1.5em;
+  color: white;
+  font-weight: 300;
+}
+
+.yellow-title {
+  font-size: 2.25em;
+  color: #debf35;
+  font-weight: 400;
+}
+
 .lt-ie9 .loader {
   display: none;
 }
@@ -534,11 +550,77 @@ a {
 .wrapper {
   padding-top: 3.125em;
   width: 100%;
+  transition: opacity .3s;
 }
 @media (max-width: 950px) {
   .wrapper {
     padding-top: 5.625em;
   }
+}
+
+@media (max-width: 950px) {
+  .js-nav-open .wrapper {
+    opacity: 0.2;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 2.5em;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 950px) {
+  .container {
+    padding: 1.875em;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 1.25em;
+  }
+}
+
+.slim-container {
+  max-width: 1000px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.star-bg {
+  background: #292929 url(../img/bg-star.jpg) center no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: relative;
+}
+.star-bg:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url(../img/pattern-lines.png);
+  top: 0;
+}
+
+.top-divider {
+  border-top: solid 5px black;
+}
+
+.centered {
+  text-align: center;
+}
+
+.gradient {
+  background: linear-gradient(to right, #c1c1c1 0%, #f3f3f3 50%, #c1c1c1 100%);
+  border-top: solid 1px #f3f3f3;
+  width: 100%;
 }
 
 /*! Flickity v1.0.0
@@ -1227,6 +1309,9 @@ Social Nav
   .newsletter-btn span {
     display: none;
   }
+  .no-touch .newsletter-btn:hover svg {
+    transform: translateX(0);
+  }
 }
 
 .social-icon {
@@ -1327,7 +1412,10 @@ Hamburger
 .featured-artists {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.3);
-  height: 13.75em;
+  height: 14.375em;
+  overflow-y: hidden;
+  border-top: solid 5px black;
+  border-bottom: solid 5px black;
 }
 
 .featured-artist {
@@ -1362,7 +1450,7 @@ Hamburger
   font-weight: 400;
   text-decoration: none;
 }
-.featured-artist:hover h3 {
+.featured-artist:hover h2 {
   background-color: #800000;
 }
 .featured-artist:hover img {
@@ -1373,9 +1461,18 @@ Hamburger
 .page-title-container {
   width: 100%;
   background-color: #292929;
-  border-top: solid 5px black;
   border-bottom: solid 5px black;
   padding: 1.5625em;
+}
+@media (max-width: 950px) {
+  .page-title-container {
+    font-size: 90%;
+  }
+}
+@media (max-width: 568px) {
+  .page-title-container {
+    font-size: 70%;
+  }
 }
 
 .page-title {
@@ -1412,7 +1509,7 @@ Hamburger
   z-index: 2;
   text-align: center;
   min-height: 4.375em;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin: 0;
@@ -1434,6 +1531,68 @@ Hamburger
   position: relative;
   z-index: 3;
   font-weight: 400;
+}
+
+.post-block {
+  width: 32.33%;
+  position: relative;
+  background-color: #292929;
+  display: block;
+  overflow: hidden;
+}
+.post-block img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 3s;
+}
+.post-block h2 {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+  padding: 1.5625em;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all .3s;
+  text-decoration: none;
+  font-weight: 400;
+  position: absolute;
+  margin: 0;
+}
+.post-block h2:before {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  margin: auto;
+  border: solid 1px white;
+  content: '';
+  display: block;
+}
+.no-touch .post-block:hover h2 {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.no-touch .post-block:hover img {
+  transform: scale(2);
+  transition: transform 5s;
+}
+@media (max-width: 950px) {
+  .post-block {
+    font-size: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .post-block {
+    font-size: 90%;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 
 .hero {
