@@ -24,7 +24,7 @@
 		background-color: rgba(0,0,0,0.5);
 		transition: all .3s;
 		text-decoration: none;
-		font-weight: $font-regular;
+		font-weight: $font-light;
 		position: absolute;
 		margin: 0;
 		&:before {
@@ -41,7 +41,8 @@
 	}
 	.no-touch &:hover {
 		h2 {
-			background-color: rgba(0,0,0,0.6);
+			background-color: rgba(0,0,0,0.7);
+			color: $gold;
 		}
 		img {
 			transform: scale(2);

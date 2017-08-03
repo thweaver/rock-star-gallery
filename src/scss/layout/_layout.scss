@@ -27,6 +27,23 @@
 }
 .slim-container {
 	max-width: 1000px;
+	@media (max-width: $bp-laptop) {
+		font-size: 90%;
+	}
+	@media (max-width: $bp-tablet) {
+		font-size: 75%;
+	}
+}
+.text-container {
+	@media (max-width: $bp-laptop) {
+		padding: em(40);
+	}
+	@media (max-width: $bp-tablet) {
+		padding: em(40);
+	}
+}
+.padded-container {
+	padding: em(25) 0;
 }
 .flex-container {
 	display: flex;

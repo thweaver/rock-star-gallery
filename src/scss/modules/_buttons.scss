@@ -1,0 +1,33 @@
+.button {
+	display: block;
+	border: solid em(5) $dark-red;
+	background: $red;
+	color: white;
+	font-size: $font-copy;
+	padding: em(15) em(25) em(15) em(65);
+	text-decoration: none;
+	position: relative;
+	font-weight: $font-light;
+	transition: all .3s;
+	&:before {
+		position: absolute;
+		display: block;
+		top: 0;
+		bottom: 0;
+		left: em(10);
+		margin: auto;
+		content: '';
+		width: em(45);
+		height: em(35);
+		z-index: 2;
+		background: url(../img/icon-star.svg);
+		background-size: cover;
+		transition: all .3s;
+	}
+	.no-touch &:hover {
+		background: $bright-red;
+		&:before {
+			transform: scale(0.7);
+		}
+	}
+}

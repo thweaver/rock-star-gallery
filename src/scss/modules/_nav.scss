@@ -5,7 +5,8 @@ Main Nav
 header {
 	width: 100%;
 	background-color: $nav-bg;
-	border-top: solid 5px $border-color;
+	background: linear-gradient(to right, #c1c1c1 0%,#f3f3f3 50%,#c1c1c1 100%);
+	border-top: solid 5px $border-color !important;
 	height: em(95);
 	display: flex;
 	align-items: center;
@@ -17,6 +18,7 @@ header {
 		content: '';
 		height: em(90);
 		background-color: $nav-bg;
+		background: linear-gradient(to right, #c1c1c1 0%,#f3f3f3 50%,#c1c1c1 100%);
 		display: none;
 		z-index: 3;
 	}
@@ -100,6 +102,7 @@ header {
 	@media (max-width: $bp-laptop) {
 		flex-direction: column;
 		background-color: lighten($nav-bg, 10%);
+		display: block;
 		li:after {
 			display: none;
 		}
@@ -336,6 +339,7 @@ Secondary Nav
 		height: auto;
 		transform: translateX(101%);
 		transition: transform .3s;
+		display: block;
 	}
 }
 .js-nav-open .secondary-nav {
@@ -373,6 +377,7 @@ Secondary Nav
 		width: 100%;
 		margin: 0;
 		li {
+			height: auto;
 			.no-touch  &:hover {
 				background: rgba(255,255,255,0.2);
 					a {

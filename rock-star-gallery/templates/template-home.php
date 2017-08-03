@@ -106,12 +106,17 @@
 
 	<!-- Home Mission -->
 	<div class="star-bg top-divider">
-		<div class="container slim-container">
+		<div class="container slim-container text-container">
 			<div class="centered">
 				<h2 class="yellow-title">Welcome To ROCK STAR gallery. Scottsdale, AZ</h2>
 				<p class="callout">
 					ROCK STAR gallery™, Music Memorabilia, Signed Rock and Roll Collectibles and Celebrity Fine Art, is located in the beautiful area of Scottsdale Arizona. It has been a very desirable destination for avid collectors of music memorabilia, music lovers and art enthusiasts. Our collection of signed music memorabilia is vast and presents a memorable experience for all. It is truly art in its most exciting form.
 				</p>
+			</div>
+			<div class="padded-container">
+				<div class="video-container">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/ImixYuuvNqQ?controls=0&amp;showinfo=0?ecver=1" frameborder="0" allowfullscreen></iframe>
+				</div>
 			</div>
 		</div>
 	</div>
