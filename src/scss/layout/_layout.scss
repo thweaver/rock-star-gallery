@@ -2,6 +2,7 @@
 	padding-top: em(50);
 	width: 100%;
 	transition: opacity .3s;
+	overflow-x: hidden;
 	@media (max-width: $bp-laptop) {
 		padding-top: em(90);
 	}
