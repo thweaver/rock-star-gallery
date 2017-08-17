@@ -12,3 +12,16 @@ a {
 	color: $gold;
 	font-weight: $font-regular;
 }
+.header-copy {
+	font-size: em(20);
+	color: white;
+	text-align: center;
+	font-weight: $font-light;
+	padding: em(25);
+	width: 90%;
+	margin: 0 auto;
+	@media (max-width: $bp-tablet) {
+		width: 100%;
+		padding: em(15);
+	}
+}

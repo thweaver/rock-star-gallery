@@ -64,5 +64,14 @@ win.on( 'resize', function() {
 	}
 });
 
+////////// Sticky Footer 
+
+function stickyFooter() {
+	var footerHeight = $("footer").height();
+	$(".wrapper").css("padding-bottom", footerHeight);
+	$("footer").css("margin-top", -footerHeight);
+}
+win.on( 'load resize', stickyFooter );
+
 
 }); // jQuery

@@ -1,8 +1,10 @@
 .wrapper {
 	padding-top: em(50);
 	width: 100%;
+	min-height: 100%;
 	transition: opacity .3s;
 	overflow-x: hidden;
+	background-color: $grey;
 	@media (max-width: $bp-laptop) {
 		padding-top: em(90);
 	}

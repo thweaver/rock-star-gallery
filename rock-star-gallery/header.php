@@ -8,7 +8,7 @@
 		<title><?php the_title() ?></title>
 		<meta name="description" content="">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<link href="<?php bloginfo('template_url'); ?>/css/main.min.css" rel="stylesheet">
+		<link href="<?php bloginfo('template_url'); ?>/css/main.min.css?v=2" rel="stylesheet">
 		<script src="<?php bloginfo('template_url'); ?>/js/modernizr.min.js"></script>
 		<?php wp_head(); ?>
 	</head>
