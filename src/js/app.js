@@ -44,7 +44,7 @@ hamburger.click(function(e){
 
 //////// Flickity
 
-var flickityGallery = $( '.featured-artists' );
+var flickityGallery = $( '.js-slider' );
 
 flickityGallery.flickity({
 	cellAlign: 'center',
@@ -73,5 +73,9 @@ function stickyFooter() {
 }
 win.on( 'load resize', stickyFooter );
 
+
+//////// Venobox
+
+$('.venobox').venobox(); 
 
 }); // jQuery

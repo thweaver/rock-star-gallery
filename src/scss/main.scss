@@ -18,7 +18,8 @@
 	'layout/layout';
 
 @import
-  'plugins/flickity';
+  'plugins/flickity',
+  'plugins/venobox';
 
 @import
 	'modules/nav',
@@ -28,6 +29,8 @@
   'modules/buttons',
   'modules/page-header',
   'modules/cat-grid',
+  'modules/related',
+  'modules/product',
   'modules/footer',
   'modules/post',
 	'modules/hero';

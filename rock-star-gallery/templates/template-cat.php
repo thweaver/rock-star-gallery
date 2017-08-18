@@ -5,9 +5,9 @@
 <!--Page Title-->
 <div class="page-title-container">
 	<div class="page-title">
-		<h3>
+		<h1>
 			<span>Grace Slick</span>
-		</h3>
+		</h1>
 	</div>
 </div>
 

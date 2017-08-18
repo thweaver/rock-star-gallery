@@ -23,7 +23,7 @@
 		</div>
 		
 		<!-- Featured Artists -->
-		<div class="featured-artists">
+		<div class="featured-artists js-slider">
 			<a href="#" class="featured-artist">
 				<h2><span>Sebastian Kreuger</span></h2>
 				<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
@@ -80,7 +80,7 @@
 	</div>
 
 	<!-- Whats New -->
-	<div class="page-title-container">
+	<div class="page-title-container page-title-container--alt-container">
 		<div class="page-title">
 			<h3>
 				<span>Whats New</span>

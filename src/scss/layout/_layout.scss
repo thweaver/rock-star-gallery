@@ -21,6 +21,9 @@
 	padding: em(40);
 	position: relative;
 	z-index: 2;
+	&--page {
+		border-top: solid 1px lighten($grey, 10%);
+	}
 	@media (max-width: $bp-laptop) {
 		padding: em(30);
 	}
@@ -52,6 +55,10 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+}
+.flex-center {
+	align-items: center;
+	justify-content: center;
 }
 .star-bg {
 	background: $site-bg url(../img/bg-star.jpg) center no-repeat;

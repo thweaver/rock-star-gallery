@@ -13,7 +13,7 @@
 						</div>
 					</div>
 					<div class="footer-contact">
-						<a href="#" class="button">Schedule a Visit</a>
+						<a href="#" class="button"><span>Schedule a Visit</span></a>
 						<p>
 							15211 N. Kierland Blvd., Suite 160<br/>
 							Scottsdale, AZ 85254<br/>
