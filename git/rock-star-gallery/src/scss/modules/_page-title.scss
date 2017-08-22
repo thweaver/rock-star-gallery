@@ -1,0 +1,88 @@
+.page-title-container {
+	width: 100%;
+	background-color: #1d1d1d;
+	padding: em(25);
+	@media (max-width: $bp-laptop) {
+		font-size: 90%;
+	}
+	@media (max-width: $bp-mobile) {
+		font-size: 70%;
+	}
+	&--alt-container {
+		border-bottom: solid 5px black;
+	}
+}
+.page-title {
+	width: 90%;
+	max-width: em(860);
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+	&:before {
+		@extend %pseudos;
+		width: 100%;
+		height: 1px;
+		background-color: $gold;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		transform: translateY(-5px);
+	}
+	&:after {
+		@extend %pseudos;
+		width: 75%;
+		height: 1px;
+		background-color: $gold;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		transform: translateY(5px);
+	}
+	h1, h2, h3 {
+		padding: 0 em(25);
+		background-color: #1d1d1d;
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		min-height: em(70);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		&:before {
+			@extend %pseudos;
+			width: em(70);
+			height: em(70);
+			border: solid 6px $red;
+			border-radius: 100%;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+		}
+		span {
+			color: $white;
+			font-size: $font-medium;
+			position: relative;
+			z-index: 3;
+			font-weight: $font-regular;
+		}
+	}
+	h1 {
+		font-size: $font-medium;
+	}
+	&--alt-title {
+		&:before, &:after {
+			background-color: $grey;
+		}
+		h1, h2, h3 {
+			&:before {
+				@extend %pseudos;
+				border: solid 6px $grey;
+			}
+		}
+	}
+}

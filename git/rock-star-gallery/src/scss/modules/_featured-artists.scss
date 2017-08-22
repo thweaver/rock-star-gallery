@@ -1,0 +1,49 @@
+.featured-artists {
+	width: 100%;
+	background-color: rgba(255,255,255,0.3);
+	height: em(230);
+	overflow-y: hidden;
+	border-top: solid 5px black;
+	border-bottom: solid 5px black;
+}
+.featured-artist {
+	width: em(300);
+	height: em(190);
+	position: relative;
+	margin: em(15) em(7);
+	display: block;
+	overflow: hidden;
+	img {
+		width: 100%;
+		height: 100%;
+		display: block;
+		transition: transform 3s;
+	}
+	h2 {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background-color: rgba(0,0,0,0.5);
+		text-align: left;
+		padding: em(15);
+		z-index: 2;
+		margin: 0;
+		transition: background .5s;
+		span {
+			color: white;
+			font-size: $font-copy;
+			font-weight: $font-regular;
+			text-decoration: none;
+		}
+	}
+	&:hover {
+		h2 {
+			background-color: $border-color;
+		}
+		img {
+			transform: scale(2);
+			transition: transform 5s;
+		}
+	}
+}

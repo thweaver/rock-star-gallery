@@ -3,3 +3,62 @@
 	background: url(../img/header-bg.jpg);
 	border-bottom: solid 1px lighten($grey, 10%);
 }
+.cat-header {
+	width: 100%;
+	background: #ececec;
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	padding: em(50);
+	min-height: em(420);
+	@media (max-width: $bp-laptop) {
+		margin-top: em(100);
+		width: 100%;
+		font-size: 90%;
+	}
+	@media (max-width: $bp-mobile) {
+		padding: em(30);
+	}
+}
+.cat-header-photo {
+	width: em(320);
+	height: em(320);
+	border: solid 5px $grey;
+	flex-shrink: 0;
+	display: block;
+	position: absolute;
+	top: em(50);
+	left: em(-50);
+	margin: auto;
+	@media (max-width: $bp-laptop) {
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		transform: translateY(em(-130));
+	}
+	@media (max-width: $bp-mobile) {
+		width: em(220);
+		height: em(220);
+	}
+}
+.cat-header-copy {
+	width: 100%;
+	text-align: left;
+	padding-left: em(270);
+	p {
+		color: $text-color;
+		font-size: em(20);
+		font-family: $font-family-copy;
+		font-weight: $font-light;
+	}
+	@media (max-width: $bp-laptop) {
+		padding-left: 0;
+		padding-top: em(240);
+	}
+	@media (max-width: $bp-mobile) {
+		padding-top: em(140);
+	}
+}
+.more-content {
+	display: none;
+}

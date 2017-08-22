@@ -1,0 +1,46 @@
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: solid em(5) $dark-red;
+	background: $red;
+	color: white;
+	padding: em(15) em(25);
+	text-decoration: none;
+	position: relative;
+	font-weight: $font-light;
+	transition: all .3s;
+	&:before {
+		display: block;
+		top: 0;
+		bottom: 0;
+		left: em(10);
+		content: '';
+		width: em(45);
+		height: em(35);
+		z-index: 2;
+		background: url(../img/icon-star.svg);
+		background-size: cover;
+		transition: all .3s;
+		margin-right: em(10);
+		transform: scale(0.8);
+	}
+	.no-touch &:hover {
+		background: $bright-red;
+		&:before {
+			transform: scale(0.7);
+		}
+	}
+	span {
+		color: white;
+		font-size: em(22);
+		text-decoration: none;
+		display: block;
+	}
+	&--full {
+		width: 100%;
+		&:before {
+			margin-left: em(-45);
+		}
+	}
+}

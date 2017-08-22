@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,700|Lato:400,700");
 /**********************
 Breakpoints 
 ***********************/
@@ -84,6 +84,10 @@ section {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+}
+
+a {
+  outline: none;
 }
 
 /* Grouping content
@@ -518,6 +522,7 @@ a {
   font-size: 2.25em;
   color: #debf35;
   font-weight: 400;
+  margin-bottom: 10px;
 }
 
 .header-copy {
@@ -592,9 +597,6 @@ a {
   position: relative;
   z-index: 2;
 }
-.container--page {
-  border-top: solid 1px #575757;
-}
 @media (max-width: 950px) {
   .container {
     padding: 1.875em;
@@ -604,6 +606,13 @@ a {
   .container {
     padding: 1.25em;
   }
+}
+.container a {
+  color: #800000;
+  transition: color .3s;
+}
+.container a:hover {
+  color: #292929;
 }
 
 .slim-container {
@@ -1025,13 +1034,22 @@ Custom Prev and Next Buttons
 /* ------- inline window ------ */
 .vbox-inline {
   width: 100%;
-  max-width: 1000px;
-  max-height: 1000px;
-  padding: 10px;
+  max-width: 800px;
   text-align: left;
   margin: 0 auto;
-  background: transparent !important;
   overflow: auto;
+  background: #ececec;
+  padding: 3.125em !important;
+  color: #292929;
+  font-size: 1.125em;
+  font-family: "Oswald", sans-serif;
+}
+.vbox-inline a {
+  color: #800000;
+  transition: color .3s;
+}
+.vbox-inline a:hover {
+  color: #292929;
 }
 .vbox-inline iframe {
   margin: 0 auto;
@@ -1065,6 +1083,8 @@ Custom Prev and Next Buttons
 @media (max-width: 460px) {
   .vbox-inline {
     width: 100%;
+    padding: 1.25em !important;
+    font-size: 90%;
   }
 
   .venoframe {
@@ -1739,7 +1759,7 @@ Hamburger
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  text-align: left;
+  text-align: center;
   padding: 0.9375em;
   z-index: 2;
   margin: 0;
@@ -1747,7 +1767,7 @@ Hamburger
 }
 .featured-artist h2 span {
   color: white;
-  font-size: 1.125em;
+  font-size: 0.875em;
   font-weight: 400;
   text-decoration: none;
 }
@@ -1773,9 +1793,6 @@ Hamburger
   .page-title-container {
     font-size: 70%;
   }
-}
-.page-title-container--alt-container {
-  border-bottom: solid 5px black;
 }
 
 .page-title {
@@ -1841,8 +1858,14 @@ Hamburger
 .page-title--alt-title:before, .page-title--alt-title:after {
   background-color: #3d3d3d;
 }
+.page-title--alt-title h1, .page-title--alt-title h2, .page-title--alt-title h3 {
+  font-size: 0.875em;
+  min-height: 3.125em;
+}
 .page-title--alt-title h1:before, .page-title--alt-title h2:before, .page-title--alt-title h3:before {
-  border: solid 6px #3d3d3d;
+  border: solid 4px #3d3d3d;
+  width: 3.125em;
+  height: 3.125em;
 }
 
 .video-container {
@@ -1915,6 +1938,81 @@ Hamburger
   border-bottom: solid 1px #575757;
 }
 
+.cat-header {
+  width: 100%;
+  background: #ececec;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  padding: 3.125em;
+  min-height: 26.25em;
+}
+@media (max-width: 950px) {
+  .cat-header {
+    margin-top: 6.25em;
+    width: 100%;
+    font-size: 90%;
+  }
+}
+@media (max-width: 568px) {
+  .cat-header {
+    padding: 1.875em;
+  }
+}
+
+.cat-header-photo {
+  width: 20em;
+  height: 20em;
+  border: solid 5px #3d3d3d;
+  flex-shrink: 0;
+  display: block;
+  position: absolute;
+  top: 3.125em;
+  left: -3.125em;
+  margin: auto;
+}
+@media (max-width: 950px) {
+  .cat-header-photo {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    transform: translateY(-8.125em);
+  }
+}
+@media (max-width: 568px) {
+  .cat-header-photo {
+    width: 13.75em;
+    height: 13.75em;
+  }
+}
+
+.cat-header-copy {
+  width: 100%;
+  text-align: left;
+  padding-left: 16.875em;
+}
+.cat-header-copy p {
+  color: #292929;
+  font-size: 1.25em;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+}
+@media (max-width: 950px) {
+  .cat-header-copy {
+    padding-left: 0;
+    padding-top: 15em;
+  }
+}
+@media (max-width: 568px) {
+  .cat-header-copy {
+    padding-top: 8.75em;
+  }
+}
+
+.more-content {
+  display: none;
+}
+
 .cat-item {
   width: 32.33%;
   height: auto;
@@ -1936,7 +2034,7 @@ Hamburger
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  text-align: left;
+  text-align: center;
   padding: 0.9375em;
   z-index: 2;
   margin: 0;
@@ -1944,7 +2042,7 @@ Hamburger
 }
 .cat-item h2 span {
   color: white;
-  font-size: 1.125em;
+  font-size: 0.875em;
   font-weight: 400;
   text-decoration: none;
 }
@@ -1995,7 +2093,7 @@ Hamburger
   left: 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  text-align: left;
+  text-align: center;
   padding: 0.9375em;
   z-index: 2;
   margin: 0;
@@ -2003,7 +2101,7 @@ Hamburger
 }
 .related-item h2 span {
   color: white;
-  font-size: 1.125em;
+  font-size: 0.875em;
   font-weight: 400;
   text-decoration: none;
 }
@@ -2273,6 +2371,7 @@ footer .container {
   background-size: cover;
   position: relative;
   flex-direction: column;
+  font-size: 90%;
 }
 .hero:before {
   width: 100%;

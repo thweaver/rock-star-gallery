@@ -43,7 +43,7 @@ Boxed Canvas 56in x 37.50in • Edition size 150</p>
 </div>
 
 <!--Page Title-->
-<div class="page-title-container">
+<div class="page-title-container page-title-container--alt-container">
 	<div class="page-title page-title--alt-title">
 		<h3>
 			<span>More From This Artist</span>

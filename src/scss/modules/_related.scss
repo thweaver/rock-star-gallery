@@ -24,14 +24,14 @@
 		left: 0;
 		width: 100%;
 		background-color: rgba(0,0,0,0.5);
-		text-align: left;
+		text-align: center;
 		padding: em(15);
 		z-index: 2;
 		margin: 0;
 		transition: background .5s;
 		span {
 			color: white;
-			font-size: $font-copy;
+			font-size: $font-small;
 			font-weight: $font-regular;
 			text-decoration: none;
 		}

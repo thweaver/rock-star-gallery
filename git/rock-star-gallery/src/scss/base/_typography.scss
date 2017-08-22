@@ -1,0 +1,27 @@
+a {
+	text-decoration: none;
+	transition: color .3s;
+}
+.callout {
+	font-size: $font-medium;
+	color: white;
+	font-weight: $font-light;
+}
+.yellow-title {
+	font-size: $font-large;
+	color: $gold;
+	font-weight: $font-regular;
+}
+.header-copy {
+	font-size: em(20);
+	color: white;
+	text-align: center;
+	font-weight: $font-light;
+	padding: em(25);
+	width: 90%;
+	margin: 0 auto;
+	@media (max-width: $bp-tablet) {
+		width: 100%;
+		padding: em(15);
+	}
+}

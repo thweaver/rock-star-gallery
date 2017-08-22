@@ -1,0 +1,69 @@
+/**********************
+Breakpoints 
+***********************/
+
+$bp-xl: 1824px;
+$bp-large: 1300px;
+$bp-desktop: 1100px;
+$bp-laptop: 950px;
+$bp-tablet: 768px;
+$bp-mobile: 568px;
+$bp-small: 480px;
+$bp-xs: 320px;
+
+/**********************
+Colors
+***********************/
+
+$bright-red : #bc0000;
+$red : #800000;
+$dark-red : #5c0000;
+$gold : #debf35;
+$light-grey : #c0c0c0;
+$grey : #3d3d3d;
+$white : #dedede;
+$dark-grey : #292929;
+
+/**********************
+Color Usage
+***********************/
+
+$site-bg : $dark-grey;
+$nav-bg : $light-grey;
+$border-color : $red;
+$text-color : $dark-grey;
+$input-bg : $white;
+$input-border : #afafaf;
+$input-text : #808080;
+$link-color : $border-color;
+$secondary-nav-bg : $dark-grey;
+$social-icon-fill : $gold;
+$title-bg : $dark-grey;
+
+/**********************
+Font Family
+***********************/
+
+$font-family: 'Oswald', sans-serif;
+
+/**********************
+Font Weights
+***********************/
+
+$font-light: 300;
+$font-regular: 400;
+$font-bold: 700;
+
+/**********************
+Font Size
+***********************/
+
+$browser-context: 16; 
+$font-small: em(14);
+$font-default: em(16);
+$font-copy: em(18);
+$font-medium: em(24);
+$font-large: em(36);
+$font-xl: em(40);
+$font-xxl: em(43);
+

@@ -21,14 +21,18 @@
 	padding: em(40);
 	position: relative;
 	z-index: 2;
-	&--page {
-		border-top: solid 1px lighten($grey, 10%);
-	}
 	@media (max-width: $bp-laptop) {
 		padding: em(30);
 	}
 	@media (max-width: $bp-tablet) {
 		padding: em(20);
+	}
+	a {
+		color: $red;
+		transition: color .3s;
+		&:hover {
+			color: $dark-grey;
+		}
 	}
 }
 .slim-container {

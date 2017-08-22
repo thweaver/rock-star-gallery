@@ -2,6 +2,7 @@
 	width: 100%;
 	background-color: #1d1d1d;
 	padding: em(25);
+	// border-bottom: solid 1px lighten($grey, 10%);
 	@media (max-width: $bp-laptop) {
 		font-size: 90%;
 	}
@@ -9,7 +10,7 @@
 		font-size: 70%;
 	}
 	&--alt-container {
-		border-bottom: solid 5px black;
+		// border-bottom: solid 3px black !important;
 	}
 }
 .page-title {
@@ -79,9 +80,13 @@
 			background-color: $grey;
 		}
 		h1, h2, h3 {
+			font-size: $font-small;
+			min-height: em(50);
 			&:before {
 				@extend %pseudos;
-				border: solid 6px $grey;
+				border: solid 4px $grey;
+				width: em(50);
+				height: em(50);
 			}
 		}
 	}
