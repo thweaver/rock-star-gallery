@@ -1,0 +1,27 @@
+.gal-item {
+	width: 24%;
+	height: auto;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	border: solid 5px #313131;
+	margin-bottom: 1.25%;
+	img {
+		width: 100%;
+		height: auto;
+		display: block;
+		transition: transform 3s;
+	}
+	&:hover {
+		img {
+			transform: scale(2);
+			transition: transform 5s;
+		}
+	}
+	@media (max-width: $bp-laptop) {
+		width: 32.33%;
+	}
+	@media (max-width: $bp-mobile) {
+		width: 49%;
+	}
+}

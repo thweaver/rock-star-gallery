@@ -16,6 +16,7 @@ if( function_exists( 'add_image_size' ) ) {
 	add_image_size( 'feature', 600, 375, true );
 	add_image_size( 'featured-artist', 300, 190, true );
 	add_image_size( 'product-slide', 685, 445, true );
+	add_image_size( 'square', 320, 320, true );
 	add_image_size( 'full', 1200, 1200 );
 }
 

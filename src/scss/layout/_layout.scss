@@ -8,6 +8,9 @@
 	@media (max-width: $bp-laptop) {
 		padding-top: em(90);
 	}
+	&--page {
+		background: $white !important;
+	}
 }
 .js-nav-open .wrapper {
 	@media (max-width: $bp-laptop) {
@@ -52,6 +55,11 @@
 		padding: em(40);
 	}
 }
+.page-container {
+	> :last-child {
+		margin-bottom: 0 !important;
+	}
+}
 .padded-container {
 	padding: em(25) 0;
 }
@@ -59,6 +67,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	width: 100%;
 }
 .flex-center {
 	align-items: center;

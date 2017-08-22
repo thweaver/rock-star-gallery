@@ -138,4 +138,4 @@
 			</ul>
 		</nav>
 	</header>
-	<div class="wrapper">
+	<div class="wrapper <?php if(is_page_template( 'templates/template=default.php')) ?>wrapper--page<?php ?>">

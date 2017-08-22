@@ -58,3 +58,155 @@
 		margin-bottom: 10px;
 	}
 }
+
+.post-image {
+	width: 100%;
+	height: auto;
+	margin-bottom: em(50);
+}
+
+.post-copy {
+	width: 100%;
+	background: white;
+	padding: em(40);
+	margin-bottom: em(50);
+	.wysiwyg {
+		max-width: 900px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.post-gal {
+	width: 100%;
+	margin-bottom: em(50);
+}
+
+.post-divider {
+	width: 90%;
+	border-top: solid 1px $grey;
+	height: em(10);
+	position: relative;
+	margin: 0 auto;
+	margin-bottom: em(50);
+	&:after {
+		content: '';
+		width: 80%;
+		height: 1px;
+		background: $grey;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+	}
+}
+
+.post-sub-title {
+	width: 90%;
+	max-width: em(860);
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+	margin-bottom: em(50);
+	&:before {
+		@extend %pseudos;
+		width: 100%;
+		height: 1px;
+		background-color: $grey;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		transform: translateY(-5px);
+	}
+	&:after {
+		@extend %pseudos;
+		width: 75%;
+		height: 1px;
+		background-color: $grey;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		transform: translateY(5px);
+	}
+	h1, h2, h3 {
+		padding: 0 em(25);
+		background-color: $white;
+		position: relative;
+		z-index: 2;
+		text-align: center;
+		min-height: em(50);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		&:before {
+			@extend %pseudos;
+			width: em(50);
+			height: em(50);
+			border: solid 4px $grey;
+			border-radius: 100%;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+		}
+		span {
+			color: $dark-grey;
+			font-size: $font-default;
+			position: relative;
+			z-index: 3;
+			font-weight: $font-regular;
+			display: block;
+			background-color: $white;
+		}
+	}
+	h1 {
+		font-size: $font-medium;
+	}
+}
+.post-item {
+	margin-bottom: em(50);
+}
+.post-header {
+	width: 100%;
+	position: relative;
+	margin-bottom: em(90);
+	margin-top: em(40);
+	display: flex;
+}
+.post-title {
+	position: absolute;
+	max-width: 80%;
+	z-index: 2;
+	bottom: 0;
+	transform: translateY(em(30));
+	margin: 0 auto;
+	text-align: center;
+	display: block;
+	left: 0;
+	right: 0;
+	width: 100%;
+	div {
+		background: $red;
+		padding: em(25) em(30) em(30);
+		display: inline-block;
+		margin: 0 auto;
+		text-align: left;
+	}
+	h1 {
+		color: white;
+		font-size: $font-large;
+		font-weight: $font-regular;
+		padding: 0;
+		margin: 0;
+	}
+	span {
+		display: block;
+		font-size: $font-default;
+		color: white;
+	}
+}
