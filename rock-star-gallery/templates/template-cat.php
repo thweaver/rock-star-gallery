@@ -34,7 +34,7 @@
 		</p>
 	</div> -->
 </div>
-<div class="container flex-container">
+<div class="container flex-container post-flex-container">
 	<a href="#" class="cat-item">
 		<h2><span>Sebastian Kreuger</span></h2>
 		<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">

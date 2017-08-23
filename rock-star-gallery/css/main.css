@@ -41,6 +41,8 @@ html {
   /* 3 */
   -webkit-text-size-adjust: 100%;
   /* 3 */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   height: 100%;
 }
 
@@ -1879,6 +1881,25 @@ Hamburger
   height: 3.125em;
 }
 
+.blog-title {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  transform: translateY(-0.625em);
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  text-align: center;
+}
+.blog-title span {
+  padding: 5px;
+  font-size: 0.875em;
+  color: white;
+  font-weight: 400;
+  background: #121212;
+  margin: 0 auto;
+}
+
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -2032,6 +2053,7 @@ Hamburger
   overflow: hidden;
   border: solid 5px #313131;
   margin-bottom: 1.25%;
+  background: black;
 }
 .cat-item img {
   width: 100%;
@@ -2345,6 +2367,7 @@ footer .container {
   background-color: #292929;
   display: block;
   overflow: hidden;
+  margin-bottom: 1%;
 }
 .post-block img {
   width: 100%;
@@ -2405,7 +2428,13 @@ footer .container {
 .post-image {
   width: 100%;
   height: auto;
+  display: block;
   margin-bottom: 3.125em;
+}
+@media (max-width: 768px) {
+  .post-image {
+    margin-bottom: 0;
+  }
 }
 
 .post-copy {
@@ -2418,6 +2447,49 @@ footer .container {
   max-width: 900px;
   width: 100%;
   margin: 0 auto;
+}
+.post-copy .wysiwyg h1, .post-copy .wysiwyg h2, .post-copy .wysiwyg h3, .post-copy .wysiwyg h4, .post-copy .wysiwyg h5, .post-copy .wysiwyg h6, .post-copy .wysiwyg a {
+  color: #800000;
+  margin-top: 0;
+}
+.post-copy .wysiwyg h1, .post-copy .wysiwyg h2 {
+  font-size: 2.25em;
+}
+.post-copy .wysiwyg h1 {
+  font-size: 2.5em;
+}
+.post-copy .wysiwyg h2 {
+  font-size: 2.25em;
+  margin-bottom: 0.3125em;
+}
+.post-copy .wysiwyg h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.3125em;
+}
+.post-copy .wysiwyg h4, .post-copy .wysiwyg h5, .post-copy .wysiwyg h6 {
+  font-size: 1.125em;
+}
+.post-copy .wysiwyg a {
+  transition: color .3s;
+}
+.post-copy .wysiwyg a:hover {
+  color: #292929;
+}
+.post-copy .wysiwyg h3, .post-copy .wysiwyg h4 {
+  font-weight: 400;
+}
+.post-copy .wysiwyg p, .post-copy .wysiwyg ul {
+  font-size: 1.25em;
+  margin-bottom: 2.5em;
+  color: #292929;
+}
+.post-copy .wysiwyg strong, .post-copy .wysiwyg b {
+  font-weight: 700;
+}
+@media (max-width: 950px) {
+  .post-copy {
+    font-size: 80%;
+  }
 }
 
 .post-gal {
@@ -2508,6 +2580,11 @@ footer .container {
 .post-sub-title h1 {
   font-size: 1.5em;
 }
+@media (max-width: 950px) {
+  .post-sub-title {
+    font-size: 80%;
+  }
+}
 
 .post-item {
   margin-bottom: 3.125em;
@@ -2518,7 +2595,24 @@ footer .container {
   position: relative;
   margin-bottom: 5.625em;
   margin-top: 2.5em;
-  display: flex;
+}
+@media (max-width: 950px) {
+  .post-header {
+    font-size: 70%;
+    margin-bottom: 6.875em;
+  }
+}
+@media (max-width: 768px) {
+  .post-header {
+    margin-bottom: 2.5em;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-header {
+    margin-top: 2.5em;
+  }
 }
 
 .post-title {
@@ -2552,6 +2646,63 @@ footer .container {
   display: block;
   font-size: 1em;
   color: white;
+}
+@media (max-width: 950px) {
+  .post-title {
+    transform: translateY(4.375em);
+  }
+}
+@media (max-width: 768px) {
+  .post-title {
+    position: static;
+    transform: translateY(0);
+    max-width: 100%;
+  }
+  .post-title div {
+    width: 100%;
+  }
+  .post-title h1 {
+    font-size: 2em;
+  }
+}
+
+.post-flex-container {
+  margin: -0.5%;
+}
+.post-flex-container > a {
+  margin: 0 0.5% 1% 0.5%;
+}
+
+.pagination {
+  text-align: left;
+  margin: 3.75em;
+  margin-bottom: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875em;
+  list-style: none;
+}
+.pagination .pagination-label {
+  padding-right: 15px;
+}
+.pagination .pagination-item {
+  display: block;
+  background: #292929;
+  transition: background .3s;
+  margin: 0 1px;
+}
+.pagination .pagination-item a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.pagination .pagination-item:hover {
+  background: #800000;
+}
+.pagination .pagination-item-current {
+  background: #3d3d3d;
 }
 
 .hero {

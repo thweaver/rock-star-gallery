@@ -4,6 +4,7 @@
 	background-color: $site-bg;
 	display: block;
 	overflow: hidden;
+	margin-bottom: 1%;
 	img {
 		width: 100%;
 		height: auto;
@@ -62,7 +63,11 @@
 .post-image {
 	width: 100%;
 	height: auto;
+	display: block;
 	margin-bottom: em(50);
+	@media (max-width: $bp-tablet) {
+		margin-bottom: 0;
+	}
 }
 
 .post-copy {
@@ -74,6 +79,51 @@
 		max-width: 900px;
 		width: 100%;
 		margin: 0 auto;
+		h1, h2, h3, h4, h5, h6, a {
+			color: $red;
+			margin-top: 0;
+		}
+		h1, h2 {
+			font-size: $font-large;
+		}
+		h1 {
+			font-size: $font-xl;
+		}
+		h2 {
+			font-size: $font-large;
+			margin-bottom: em(5);
+		}
+		h3 {
+			font-size: em(24);
+			margin-bottom: em(5);
+		}
+		h4, h5, h6 {
+			font-size: $font-copy;
+		}
+		a {
+			transition: color .3s;
+			&:hover {
+				color: $text-color;
+			}
+		}
+		h3, h4 {
+
+			font-weight: $font-regular;
+		}
+		h5, h6 {
+
+		}
+		p, ul {
+			font-size: em(20);
+			margin-bottom: em(40);
+			color: $text-color;
+		}
+		strong, b {
+			font-weight: $font-bold;
+		}
+	}
+	@media (max-width: $bp-laptop) {
+		font-size: 80%;
 	}
 }
 
@@ -167,6 +217,9 @@
 	h1 {
 		font-size: $font-medium;
 	}
+	@media (max-width: $bp-laptop) {
+		font-size: 80%;
+	}
 }
 .post-item {
 	margin-bottom: em(50);
@@ -176,7 +229,19 @@
 	position: relative;
 	margin-bottom: em(90);
 	margin-top: em(40);
-	display: flex;
+	@media (max-width: $bp-laptop) {
+		font-size: 70%;
+		margin-bottom: em(110);
+	}
+	@media (max-width: $bp-tablet) {
+		margin-bottom: em(40);
+		margin-top: 0;
+	}
+}
+.blog-header {
+	@media (max-width: $bp-tablet) {
+		margin-top: em(40);
+	}
 }
 .post-title {
 	position: absolute;
@@ -208,5 +273,25 @@
 		display: block;
 		font-size: $font-default;
 		color: white;
+	}
+	@media (max-width: $bp-laptop) {
+		transform: translateY(em(70));
+	}
+	@media (max-width: $bp-tablet) {
+		position: static;
+		transform: translateY(0);
+		max-width: 100%;
+		div {
+			width: 100%;
+		}
+		h1 {
+			font-size: em(32);
+		}
+	}
+}
+.post-flex-container {
+	margin: -0.5%;
+	> a {
+		margin: 0 0.5% 1% 0.5%;
 	}
 }

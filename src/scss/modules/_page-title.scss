@@ -91,3 +91,21 @@
 		}
 	}
 }
+.blog-title {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	transform: translateY(em(-10));
+	margin: 0 auto;
+	text-align: center;
+	width:  100%;
+	text-align: center;
+	span {
+		padding: 5px;
+		font-size: $font-small;
+		color: white;
+		font-weight: $font-regular;
+		background: #121212;
+		margin: 0 auto;
+	}
+}

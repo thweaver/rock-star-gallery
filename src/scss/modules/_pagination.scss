@@ -1,0 +1,31 @@
+.pagination {
+	text-align: left;
+	margin: em(60);
+	margin-bottom: em(80);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: $font-small;
+	list-style: none;
+	.pagination-label {
+		padding-right: 15px;
+	}
+	.pagination-item {
+		display: block;
+		background: $dark-grey;
+		transition: background .3s;
+		margin: 0 1px;
+		a {
+			color: white;
+			text-decoration: none;
+			display: block;
+			padding: 10px;
+		}
+		&:hover {
+			background: $red;
+		}
+	}
+	.pagination-item-current {
+		background: $grey;
+	}
+}

@@ -103,8 +103,8 @@
 		</div>
 		<nav class="secondary-nav">
 			<ul class="secondary-nav-list">
-				<li><a href="#" class="secondary-nav-item">Whats New</a></li>
-				<li><a href="#" class="secondary-nav-item">Live Events</a></li>
+				<li><a href="#" class="secondary-nav-item">Featured Collections</a></li>
+				<li><a href="#" class="secondary-nav-item">Gallery</a></li>
 				<li><a href="#" class="secondary-nav-item">Press</a></li>
 				<li><a href="#" class="secondary-nav-item">Contact Us</a></li>
 			</ul>

@@ -125,7 +125,6 @@ function tfg_pagination( $pages = '', $range = 2 ) {
 		}
 	}
 	if( $pages > 1 ) {
-		echo "<div class='pagination'>";
 		echo "<ul class='pagination-inner'>";
 		echo "<li class='pagination-label'>Page " . $paged . ' of ' . $pages . "</li>";
 		if( $paged > 2 && $paged > $range + 1 && $showitems < $pages ) echo "<li class='pagination-item'><a href='" . get_pagenum_link( 1 ) . "' class='pagination-link'>&laquo;</a></li>";
@@ -142,7 +141,6 @@ function tfg_pagination( $pages = '', $range = 2 ) {
 		if( $paged < $pages && $showitems < $pages ) echo "<li class='pagination-item'><a href='" . get_pagenum_link( $paged + 1 ) . "' class='pagination-link'>&rsaquo;</a></li>";
 		if( $paged < $pages - 1 && $paged + $range-1 < $pages && $showitems < $pages ) echo "<li class='pagination-item'><a href='".get_pagenum_link($pages)."' class='pagination-link'>&raquo;</a></li>";
 		echo "</ul>";
-		echo "</div>";
 	}
 }
 

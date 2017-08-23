@@ -19,7 +19,7 @@
 		</p>
 	</div>
 </div> -->
-<div class="container flex-container">
+<div class="container flex-container post-flex-container">
 	<a href="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" class="gal-item venobox" data-gall="gal">
 		<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
 	</a>
