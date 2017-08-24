@@ -5,6 +5,7 @@
 	overflow-y: hidden;
 	border-top: solid 5px black;
 	border-bottom: solid 5px black;
+	z-index: 2;
 }
 .featured-artist {
 	width: em(300);

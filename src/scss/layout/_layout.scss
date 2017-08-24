@@ -54,10 +54,23 @@
 	@media (max-width: $bp-tablet) {
 		padding: em(40);
 	}
+
 }
 .page-container {
+	padding-top: em(60);
+	padding-bottom: em(60);
 	> :last-child {
 		margin-bottom: 0 !important;
+	}
+	@media (max-width: $bp-laptop) {
+		padding: em(30);
+		padding-top: em(40);
+		padding-bottom: em(40);
+	}
+	@media (max-width: $bp-tablet) {
+		padding: em(20);
+		padding-top: em(30);
+		padding-bottom: em(30);
 	}
 }
 .padded-container {

@@ -21,7 +21,12 @@
 				</a>
 			</div>
 		</div>
-		
+		<div class="hero-video-container">
+			<video playsinline autoplay muted loop class="hero-video">
+    		    <source src="<?php bloginfo('template_url'); ?>/vid/rsgbg.mp4" type="video/mp4">
+    		    <source src="<?php bloginfo('template_url'); ?>/vid/rsgbg.webm" type="video/webm">
+    		</video>
+    	</div>
 		<!-- Featured Artists -->
 		<div class="featured-artists js-slider">
 			<a href="#" class="featured-artist">

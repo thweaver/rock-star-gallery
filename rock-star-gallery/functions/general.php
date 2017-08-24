@@ -125,7 +125,7 @@ function tfg_pagination( $pages = '', $range = 2 ) {
 		}
 	}
 	if( $pages > 1 ) {
-		echo "<ul class='pagination-inner'>";
+		echo "<ul class='pagination'>";
 		echo "<li class='pagination-label'>Page " . $paged . ' of ' . $pages . "</li>";
 		if( $paged > 2 && $paged > $range + 1 && $showitems < $pages ) echo "<li class='pagination-item'><a href='" . get_pagenum_link( 1 ) . "' class='pagination-link'>&laquo;</a></li>";
 		if( $paged > 1 && $showitems < $pages ) echo "<li class='pagination-item'><a href='" . get_pagenum_link( $paged - 1 ) . "' class='pagination-link'>&lsaquo;</a></li>";
