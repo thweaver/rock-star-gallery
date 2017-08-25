@@ -1,0 +1,25 @@
+.testimonial-form {
+	flex: 0 0 300px;
+	min-height: 100%;
+	margin-bottom: em(50);
+	display: block;
+	background: $light-grey;
+	@media (max-width: $bp-laptop) {
+		width: 100%;
+		font-size: 90%;
+		order:2;
+		min-height: 60px;
+		flex-grow: 1;
+		margin-bottom: em(30);
+	}
+}
+.testimonial-container {
+	flex: 1;
+	padding-right: em(40);
+	@media (max-width: $bp-laptop) {
+		width: 100%;
+		padding-right: 0;
+		flex: 0 0 100%;
+	}
+
+}

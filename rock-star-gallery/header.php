@@ -13,6 +13,11 @@
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class( 'page-' . $post->post_name ); ?>>
+	<div class="loader">
+		<div class="loader-wrapper">
+			<?php include 'img/loader-icon.svg' ?>
+		</div>
+	</div>
 	<header>
 		<a href="#" class="site-logo">
 			<?php include 'img/logo-rockstar.svg' ?>

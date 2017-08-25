@@ -13,8 +13,6 @@
 
 <div class="container page-container">
 	<div class="flex-container">
-		<div class="contact-form">
-		</div>
 		<div class="contact-info">
 			<h2>Rock Star Gallery</h2>
 			<div class="contact-links">
@@ -34,6 +32,9 @@
 			<h4>Monday – Saturday 10:00am – 9:00pm<br/>Sunday 12:00pm – 5:00pm
 			</h4>
 		</div>
+		<div class="contact-form">
+		</div>
+		
 	</div>
 	<div class="contact-map">
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.258024119663!2d-111.9319880847962!3d33.624551180724566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b743e6425a5c5%3A0xdbce0377df3404cc!2s15211+N+Kierland+Blvd+%23160%2C+Scottsdale%2C+AZ+85254!5e0!3m2!1sen!2sus!4v1503539679122" frameborder="0" style="border:0" allowfullscreen></iframe>

@@ -1,0 +1,96 @@
+/***** Loader ******/
+
+.loader {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	position: fixed;
+	z-index: 9999;
+	background: black;
+	background: radial-gradient(ellipse at center, $dark-grey 0%,black 100%);
+	pointer-events: none;
+}
+.loader-wrapper {
+	width: 80px;
+	height: 80px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+}
+.loader svg {
+	width: 100%;
+	height: 100%;
+	transform-origin: center;
+	transform: scale(0.7);
+	animation: scale 2s infinite;
+	path {
+		fill: none;
+		  stroke: $gold;
+		  stroke-width: 2;
+		  stroke-dasharray: 295;
+		  stroke-dashoffset: 295;
+		  animation: outer-stroke 2s infinite;
+	}
+}
+
+@keyframes outer-stroke {
+  50% {
+    stroke-dashoffset: 0;
+    stroke: $gold;
+  }
+  100% {
+    stroke-dashoffset: -295;
+    stroke: $gold;
+  }
+}
+@keyframes scale {
+	100% {
+		transform: scale(1.1);
+	}
+}
+// @keyframes after {
+// 	0% {
+// 		opacity: 0;
+// 		transform: scale(0.8);
+// 	}
+// 	50% {
+// 		opacity: 1;
+// 	}
+// 	100% {
+// 		transform: scale(2);
+// 		opacity: 0;
+// 	}
+// }
+
+/***** Site ******/
+
+/*body {
+	overflow: hidden;
+}*/
+.wrapper {
+	opacity: 0;
+}
+
+/***** loaded ******/
+
+.loaded .loader-wrapper {
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+.loaded .loader {
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity 0.5s 0.5s, visibility 0s 1s;
+}
+/*.loaded body {
+	overflow: auto;
+	transition: overflow 0s 1.8s;
+}*/
+.loaded .wrapper {
+	opacity: 1;
+	transition: opacity 0.5s 1s;
+}
