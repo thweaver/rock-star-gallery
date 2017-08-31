@@ -1,7 +1,7 @@
 <?php /* Template Name: Contact Template */ ?>
 
 <?php get_header(); ?>
-
+<div class="wrapper wrapper--page">
 <!--Page Title-->
 <div class="page-title-container">
 	<div class="page-title">

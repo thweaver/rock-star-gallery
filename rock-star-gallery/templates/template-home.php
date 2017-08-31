@@ -1,7 +1,7 @@
 <?php /* Template Name: Home Template */ ?>
 
 <?php get_header(); ?>
-
+<div class="wrapper">
 	<!-- Hero -->
 	<div class="hero">
 		<div class="hero-brand">

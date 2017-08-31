@@ -2919,7 +2919,6 @@ footer .container {
 }
 
 .post-flex-container {
-  margin: -0.5% auto;
   justify-content: flex-start;
 }
 .post-flex-container > a {

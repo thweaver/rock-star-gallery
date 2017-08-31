@@ -1,7 +1,7 @@
-<?php /* Template Name: Category Template */ ?>
+<?php /* Template Name: Gal Template */ ?>
 
 <?php get_header(); ?>
-
+<div class="wrapper">
 <!--Page Title-->
 <div class="page-title-container">
 	<div class="page-title">
