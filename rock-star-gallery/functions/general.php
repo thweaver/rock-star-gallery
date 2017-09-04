@@ -51,61 +51,14 @@ function get_parent_slug() {
 /* Custom Navigation Menus */
 /*======================================================================================*/
 
-/*
-register_nav_menu( 'main-navigation', 'Main Navigation' );
 
-function get_nav_menu( $menu_slug ) {
-	global $post;
-	$menu_locs = get_nav_menu_locations();
-	$menu_items = wp_get_nav_menu_items( $menu_locs[ $menu_slug ] );
-
-	$nav_items = array();
-	$sub_nav_items = array();
-	if( $menu_items ) {
-		foreach( $menu_items as $item ) {
-			if( $item->menu_item_parent ) {
-				$sub_nav_items[] = $item;
-			} else {
-				if($post->ID == $item->object_id ) {
-					$item->current = true;
-				}
-				$nav_items[ $item->ID ] = $item;
-				$nav_items[ $item->ID ]->sub_nav = array();
-			}
-		}
-	}
-
-	// add sub nav items to parent item
-	if( $sub_nav_items ) {
-		foreach( $sub_nav_items as $item ) {
-			$nav_items[ $item->menu_item_parent ]->sub_nav[] = $item;
-		}
-	}
-
-	// check if parent should be marked as current based on actual page parent
-	if( $nav_items ) {
-		foreach( $nav_items as $item ) { // loop over each nav item
-			$children = get_pages( array( 'child_of' => $item->object_id ) ); // get the children of the current nav item
-			foreach($children as $child) { // for each child
-				if($child->ID == $post->ID) { // if the child is equal to the current page, make true
-					$item->current = true;
-				}
-			}
-		}
-	}
-
-	// check if parent should be marked as current based on navigational parent
-	foreach( $nav_items as $item ) {
-		foreach( $item->sub_nav as $sub_item) {
-			if($post->ID == $sub_item->object_id ) {
-				$item->current = true;
-			}
-		}
-	}
-
-	return $nav_items;
+function wpb_custom_new_menu() {
+  register_nav_menu('top-menu',__( 'Top Menu' ));
+  register_nav_menu('sub-menu',__( 'Sub Menu' ));
 }
-*/
+add_action( 'init', 'wpb_custom_new_menu' );
+
+
 
 /*==============================================================================
 Pagination
