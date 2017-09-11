@@ -86,6 +86,9 @@
 	align-items: center;
 	justify-content: center;
 }
+.flex-top-center {
+	justify-content: center;
+}
 .star-bg {
 	background: $site-bg url(../img/bg-star.jpg) center no-repeat;
 	background-size: cover; 

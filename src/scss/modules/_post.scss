@@ -69,9 +69,19 @@
 		margin-bottom: 0;
 	}
 }
-
+.post-content-image {
+	width: 100%;
+	height: auto;
+	display: block;
+	img {
+		width: 100%;
+		display: block;
+	}
+}
 .post-copy {
 	width: 100%;
+	max-width: 980px;
+	margin: 0 auto;
 	background: white;
 	padding: em(40);
 	margin-bottom: em(50);

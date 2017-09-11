@@ -5,7 +5,6 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
 		<meta name="format-detection" content="telephone=no">
-		<title><?php the_title() ?></title>
 		<meta name="description" content="">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
 		<link href="<?php bloginfo('template_url'); ?>/css/main.min.css?v=2" rel="stylesheet">

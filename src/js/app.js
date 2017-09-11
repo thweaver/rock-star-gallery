@@ -50,9 +50,9 @@ flickityGallery.flickity({
 	cellAlign: 'center',
 	autoPlay: 4000,
 	imagesLoaded: true,
-	wrapAround: true,
+	wrapAround: false,
 	pageDots: false,
-	resize: false,
+	resize: true,
 	prevNextButtons: true
 });
 
@@ -61,6 +61,27 @@ var flickityGalleryData = flickityGallery.data( 'flickity' );
 win.on( 'resize', function() {
 	if( flickityGalleryData ) {
 		flickityGalleryData.resize();
+	}
+});
+
+var flickityGallery2 = $( '.js-slider-2' );
+
+flickityGallery2.flickity({
+	cellAlign: 'center',
+	autoPlay: 4000,
+	imagesLoaded: true,
+	contain: true,
+	wrapAround: false,
+	pageDots: false,
+	resize: true,
+	prevNextButtons: true,
+});
+
+var flickityGalleryData2 = flickityGallery2.data( 'flickity' );
+
+win.on( 'resize', function() {
+	if( flickityGalleryData2 ) {
+		flickityGalleryData2.resize();
 	}
 });
 

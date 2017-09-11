@@ -1,3 +1,7 @@
+<?php get_header(); ?>
+<?php
+	$cust_tax = '';
+?>
 
 <?php 
 	$item_image = get_field('featured_product_photo');
@@ -22,7 +26,7 @@
 <div class="page-title-container">
 	<div class="page-title">
 		<h1>
-			<span><?php echo $term->name ?></span>
+			<span>Rock Star gallery Merchandise</span>
 		</h1>
 	</div>
 </div>
@@ -45,7 +49,6 @@
 	<div class="product-info">
 		<div class="product-title">
 			<h2><?php the_title(); ?></h2>
-			<h3>By: <?php echo $term->name ?></h3>
 			<?php if(get_field('item_id')) { ?>
 			<h4>Item ID: <?php the_field('item_id') ?></h4>
 			<?php } ?>
@@ -94,14 +97,6 @@
 		$query = new WP_Query(array(
 			'post_type' => $post_type,
 			'posts_per_page' => 12,
-			'tax_query' => array(
-				  array(
-				    'taxonomy' => $cust_tax,
-				    'field' => 'id',
-				    'terms' => $term->term_id, // Where term_id of Term 1 is "1".
-				    'include_children' => false
-				  )
-			)
 		));
 	?>
 	<?php if ( $query->have_posts() ) { ?>
@@ -159,3 +154,4 @@
 
 </div>
 <?php } ?>
+<?php get_footer(); ?>

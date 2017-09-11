@@ -530,7 +530,7 @@ a {
 .header-copy {
   font-size: 1.25em;
   color: white;
-  text-align: center;
+  text-align: left;
   font-weight: 300;
   padding: 1.5625em;
   width: 90%;
@@ -680,6 +680,10 @@ a {
 
 .flex-center {
   align-items: center;
+  justify-content: center;
+}
+
+.flex-top-center {
   justify-content: center;
 }
 
@@ -897,6 +901,15 @@ Custom Prev and Next Buttons
 		width: 40px;
 	}
 }*/
+.js-slider-2 .flickity-slider {
+  display: flex;
+}
+.js-slider-2 .flickity-slider a {
+  position: relative !important;
+  left: 0 !important;
+  flex-shrink: 0;
+}
+
 /* ------ venobox.css --------*/
 .vbox-overlay *, .vbox-overlay *:before, .vbox-overlay *:after {
   -webkit-backface-visibility: hidden;
@@ -1998,7 +2011,7 @@ Hamburger
   width: 90%;
   margin: 0 auto;
   padding: 3.125em;
-  min-height: 26.25em;
+  min-height: 20.625em;
 }
 @media (max-width: 950px) {
   .cat-header {
@@ -2014,8 +2027,8 @@ Hamburger
 }
 
 .cat-header-photo {
-  width: 20em;
-  height: 20em;
+  width: 23em;
+  height: 14.375em;
   border: solid 5px #3d3d3d;
   flex-shrink: 0;
   display: block;
@@ -2029,20 +2042,18 @@ Hamburger
     margin: 0 auto;
     left: 0;
     right: 0;
-    transform: translateY(-8.125em);
-  }
-}
-@media (max-width: 568px) {
-  .cat-header-photo {
-    width: 13.75em;
-    height: 13.75em;
+    margin-top: -8.125em;
+    width: 90%;
+    max-width: 600px;
+    height: auto;
+    position: static;
   }
 }
 
 .cat-header-copy {
   width: 100%;
   text-align: left;
-  padding-left: 16.875em;
+  padding-left: 19.375em;
 }
 .cat-header-copy p {
   color: #292929;
@@ -2053,17 +2064,18 @@ Hamburger
 @media (max-width: 950px) {
   .cat-header-copy {
     padding-left: 0;
-    padding-top: 15em;
-  }
-}
-@media (max-width: 568px) {
-  .cat-header-copy {
-    padding-top: 8.75em;
+    padding-top: 1.875em;
   }
 }
 
 .more-content {
   display: none;
+}
+
+.full-cat-header {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .cat-item {
@@ -2414,7 +2426,7 @@ Hamburger
 
 .contact-info {
   width: 50%;
-  padding-left: 5em;
+  padding-right: 5em;
   text-align: left;
 }
 .contact-info h2 {
@@ -2441,7 +2453,7 @@ Hamburger
 @media (max-width: 950px) {
   .contact-info {
     width: 100%;
-    padding-left: 0;
+    padding-right: 0;
     font-size: 90%;
     order: 1;
     margin-bottom: 2.5em;
@@ -2689,8 +2701,20 @@ footer .container {
   }
 }
 
+.post-content-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.post-content-image img {
+  width: 100%;
+  display: block;
+}
+
 .post-copy {
   width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
   background: white;
   padding: 2.5em;
   margin-bottom: 3.125em;

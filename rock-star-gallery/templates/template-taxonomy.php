@@ -1,23 +1,27 @@
-<?php /* Template Name: Category Template */ ?>
-
-<?php get_header(); ?>
+<?php 
+	$term = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy') );
+	$queried_object = get_queried_object(); 
+	$taxonomy = $queried_object->taxonomy;
+	$term_id = $queried_object->term_id;  
+?>
 <div class="wrapper">
 <!--Page Title-->
 <div class="page-title-container">
 	<div class="page-title">
 		<h1>
-			<span><?php the_title() ?></span>
+			<span><?php echo $term->name; ?></span>
 		</h1>
 	</div>
 </div>
+
+
+
+
 <?php 
-	$header_photo = get_field('category_photo');
+	$header_photo = get_field('category_photo',  $taxonomy.'_'.$term_id);
 	$sml_header_photo = $header_photo['sizes']['feature'];
 	$lrg_header_photo = $header_photo['sizes']['page-header'];
-	$header_copy = get_field('category_copy');
-	$page_items = get_field('page_items');
-	$product_cat = get_field('product_category');
-	$post_type = get_field('product_category_2');
+	$header_copy = get_field('category_copy', $taxonomy.'_'.$term_id);
 ?>
 <!--Page Header-->
 <div class="page-header">
@@ -58,60 +62,22 @@
 	<?php } ?>
 </div>
 
-<!--Artists-->
-
-
-
-
- <?php if( $page_items == 'art' ){ ?>
- <?php $terms = get_terms( $product_cat ); 
- 	
- ?>
- <div class="container flex-container post-flex-container">
- <?php foreach ( $terms as $term )  : ?>
-  
-    <?php 
-    	$cat_image = get_field('category_photo', $term);
-    	$cat_image = $cat_image['sizes']['feature'];
-    	$term_link = get_term_link( $term );
-    ?>
-     
-    <a href="<?php echo $term_link; ?>" class="cat-item">
-    	<h2><span><?php echo $term->name; ?></span></h2>
-    	<?php if($cat_image) { ?>
-    	<img src="<?php echo $cat_image; ?>" alt="<?php echo $category->name; ?>">
-    	<?php } ?>
-    	<?php if(!$cat_image) { ?>
-    	<img src="<?php bloginfo('template_url'); ?>/img/default-thumb.png" alt="<?php echo $category->name; ?>">
-    	<?php } ?>
-    </a>
- <?php endforeach; ?>
-	</div>
- <?php } ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!--Products-->
-<?php if( $page_items == 'pro' ){ ?>
 <?php
 	global $paged;
 	if(empty($paged)) $paged = 1;
 	$query = new WP_Query(array(
-		'post_type' => $post_type,
-		'posts_per_page' => 999,
+	    'post_type' => $cust_post,
+	    'posts_per_page'    => 999, //important for a PHP memory limit warning
+	      'tax_query' => array(
+	        array(
+	          'taxonomy' => $taxonomy,
+	          'field' => 'id',
+	          'terms' => $term_id, // Where term_id of Term 1 is "1".
+	          'include_children' => false
+	        )
+	      )
 	));
 ?>
 <?php if ( $query->have_posts() ) { ?>
@@ -130,6 +96,5 @@
 	</div>
 <?php } else { ?>
 <?php } ?>
-<?php } ?>
+
 </div>
-<?php get_footer(); ?>

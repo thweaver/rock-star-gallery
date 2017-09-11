@@ -6,70 +6,89 @@
 <div class="page-title-container">
 	<div class="page-title">
 		<h1>
-			<span>Grace Slick</span>
+			<span><?php the_title() ?></span>
 		</h1>
 	</div>
 </div>
-
+<?php 
+	$header_photo = get_field('category_photo');
+	$sml_header_photo = $header_photo['sizes']['feature'];
+	$lrg_header_photo = $header_photo['sizes']['page-header'];
+	$header_copy = get_field('category_copy');
+	$page_items = get_field('page_items');
+	$product_cat = get_field('product_category');
+	$post_type = get_field('product_category_2');
+?>
 <!--Page Header-->
 <div class="page-header">
-	<div class="container">
-		<div class="cat-header">
-			<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-artist.jpg" class="cat-header-photo">
-			<div class="cat-header-copy">
-				<p>
-					Slap kitten brother with paw. Claws in your leg chase the pig around the house so immediately regret falling into bathtub, small kitty warm kitty little balls of fur thug cat or knock over christmas tree. Make meme, make cute face. Present belly, scratch hand when stroked relentlessly pursues moth yet rub face on everything, for play time, for wake up wander around the house making large amounts of noise jump on top of your human's bed and fall asleep again. Purr for no reason wack the mini furry mouse. Pose purrfectly to show my beauty woops poop hanging from butt must get rid run run around house drag poop on floor maybe it comes off woops left brown marks on floor human slave clean lick butt now. Chase mice lick plastic bags mark territory. Scratch the postman wake up lick paw wake up owner meow meow find empty spot in cupboard and sleep all day and small kitty warm kitty little balls of fur for stare out the window...<a href="#js-more" data-type="inline" class="venobox">Read More</a>
-				</p>
-				<div class="more-content" id="js-more">
+	<?php if($header_photo && $header_copy) { ?>
+		<div class="container">
+			<div class="cat-header">
+				<img src="<?php echo $sml_header_photo ?>" class="cat-header-photo">
+				<div class="cat-header-copy">
 					<p>
-						Slap kitten brother with paw. Claws in your leg chase the pig around the house so immediately regret falling into bathtub, small kitty warm kitty little balls of fur thug cat or knock over christmas tree. Make meme, make cute face. Present belly, scratch hand when stroked relentlessly pursues moth yet rub face on everything, for play time, for wake up wander around the house making large amounts of noise jump on top of your human's bed and fall asleep again. Purr for no reason wack the mini furry mouse. Pose purrfectly to show my beauty woops poop hanging from butt must get rid run run around house drag poop on floor maybe it comes off woops left brown marks on floor human slave clean lick butt now. Chase mice lick plastic bags mark territory. Scratch the postman wake up lick paw wake up owner meow meow find empty spot in cupboard and sleep all day and small kitty warm kitty little balls of fur for stare out the window...<a href="#js-more" data-vbtype="inline" class="venobox">Read More</a>
+						<?php
+							echo mb_strimwidth($header_copy, 0, 900, "...<a href='#js-more' data-type='inline' class='venobox'>Read More</a>");
+						?>
 					</p>
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- <div class="container">
+	<?php } ?>
+	<?php if($header_photo && !$header_copy) { ?>
+		<div class="container">
+			<img src="<?php echo $lrg_header_photo; ?>" alt="<?php the_title(); ?>" class="full-cat-header">
+		</div>
+	<?php } ?>
+	<?php if(!$header_photo && $header_copy) { ?>
+	<div class="container">
 		<p class="header-copy">
-			Slap kitten brother with paw. Claws in your leg chase the pig around the house so immediately regret falling into bathtub, small kitty warm kitty little balls of fur thug cat or knock over christmas tree. Make meme, make cute face. Present belly, scratch hand when stroked relentlessly pursues moth yet rub face on everything, for play time, for wake up wander around the house making large amounts of noise jump on top of your human's bed and fall asleep again. Purr for no reason wack the mini furry mouse. Pose purrfectly to show my beauty woops poop hanging from butt must get rid run run around house drag poop on floor maybe it comes off woops left brown marks on floor human slave clean lick butt now. Chase mice lick plastic bags mark territory. Scratch the postman wake up lick paw wake up owner meow meow find empty spot in cupboard and sleep all day and small kitty warm kitty little balls of fur for stare out the window.
+			<?php
+				echo mb_strimwidth($header_copy, 0, 900, "...<a href='#js-more' data-type='inline' class='venobox'>Read More</a>");
+			?>
 		</p>
-	</div> -->
+	</div>
+	<?php } ?>
+	<?php if($header_copy) { ?>
+	<div class="more-content" id="js-more">
+		<p>
+			<?php echo $header_copy ?>
+		</p>
+	</div>
+	<?php } ?>
 </div>
-<div class="container flex-container post-flex-container">
-	<a href="#" class="cat-item">
-		<h2><span>Sebastian Kreuger</span></h2>
-		<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
-	</a>
-	<a href="#" class="cat-item">
-		<h2><span>Sebastian Kreuger</span></h2>
-		<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
-	</a>
-	<a href="#" class="cat-item">
-		<h2><span>Sebastian Kreuger</span></h2>
-		<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
-	</a>
-	<a href="#" class="cat-item">
-		<h2><span>Sebastian Kreuger</span></h2>
-		<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
-	</a>
-	<a href="#" class="cat-item">
-		<h2><span>Sebastian Kreuger</span></h2>
-		<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
-	</a>
-	<a href="#" class="cat-item">
-		<h2><span>Sebastian Kreuger</span></h2>
-		<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
-	</a>
-	<a href="#" class="cat-item">
-		<h2><span>Sebastian Kreuger</span></h2>
-		<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
-	</a>
-	<a href="#" class="cat-item">
-		<h2><span>Sebastian Kreuger</span></h2>
-		<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
-	</a>
-	<a href="#" class="cat-item">
-		<h2><span>Sebastian Kreuger</span></h2>
-		<img src="<?php bloginfo('template_url'); ?>/img/temp/temp-feature.jpg" alt="<?php the_title(); ?>">
-	</a>
+
+<!--Pages-->
+ <div class="container flex-container post-flex-container">
+	<?php 
+ 	$posts = get_field('page_list');
+ 	if( $posts ): ?>
+ 	    <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+ 	       <?php setup_postdata($post); ?>
+ 	       <?php
+	 	       	$item_image = get_field('featured_photo');
+	 	       	$item_image = $item_image['sizes']['featured-artist'];
+	 	       	$item_image_2 = get_field('category_photo');
+	 	       	$item_image_2 = $item_image_2['sizes']['featured-artist'];
+	 	       	$title = get_the_title();
+ 	       ?>
+ 	       <a href="<?php the_permalink(); ?>" class="cat-item">
+ 	       	<h2><span><?php echo mb_strimwidth($title, 0, 70, '...'); ?></span></h2>
+	 	       <?php if($item_image) { ?>
+ 	       			<img src="<?php echo $item_image; ?>" alt="<?php the_title(); ?>">
+	 	       <?php } ?>
+ 	 	       <?php if($item_image_2) { ?>
+ 	       		<img src="<?php echo $item_image_2; ?>" alt="<?php the_title(); ?>">
+ 	 	       <?php } ?>
+ 	 	       <?php if(!$item_image_2 && !$item_image) { ?>
+ 	 	       <img src="<?php bloginfo('template_url'); ?>/img/default-thumb-sml.png" alt="<?php the_title(); ?>">
+ 	 	       <?php } ?>
+	       		</a>
+ 	    <?php endforeach; ?>
+ 	    <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+ 	<?php endif; ?>
+ </div>
+
+
 </div>
 <?php get_footer(); ?>
