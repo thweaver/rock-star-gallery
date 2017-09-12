@@ -8,16 +8,16 @@
 	background: #f1f1f1;
 	height:  3px !important;
 }
-#menu-appearance,
-#menu-plugins,
-#menu-media,
-#toplevel_page_wpseo_dashboard,
-#toplevel_page_backwpup,
-#menu-settings,
-#toplevel_page_Wordfence,
-#menu-users,
-#menu-tools,
-#toplevel_page_wpcf7,
-.hide-if-no-js {
+#menu-appearance > a,
+#menu-plugins > a,
+#menu-media > a,
+#toplevel_page_wpseo_dashboard > a,
+#toplevel_page_backwpup > a,
+#menu-settings > a,
+#toplevel_page_Wordfence > a,
+#menu-users > a,
+#menu-tools > a,
+#toplevel_page_wpcf7 > a,
+.hide-if-no-js > a {
 	opacity: 0.3;
 }
