@@ -3,3 +3,21 @@
 .form-field.term-description-wrap {
 	display: none;
 }
+.wp-menu-separator {
+	display: block !important;
+	background: #f1f1f1;
+	height:  3px !important;
+}
+#menu-appearance,
+#menu-plugins,
+#menu-media,
+#toplevel_page_wpseo_dashboard,
+#toplevel_page_backwpup,
+#menu-settings,
+#toplevel_page_Wordfence,
+#menu-users,
+#menu-tools,
+#toplevel_page_wpcf7,
+.hide-if-no-js {
+	opacity: 0.3;
+}
