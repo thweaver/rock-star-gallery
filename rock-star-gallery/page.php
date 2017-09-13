@@ -2,6 +2,7 @@
 <?php 
 	$image = get_field('featured_photo');
 	$image = $image['sizes']['page-header'];
+	$show = get_field('show_photo_2');
 ?>
 <div class="wrapper wrapper--page">
 <!--Page Title-->
@@ -14,7 +15,7 @@
 </div>
 
 <div class="container page-container">
-	<?php if($image) { ?>
+	<?php if($image && $show) { ?>
 	<!--Post Header-->
 	<div class="post-header">
 		<img src="<?php echo $image; ?>" alt="<?php echo $title ?>" class="post-image">

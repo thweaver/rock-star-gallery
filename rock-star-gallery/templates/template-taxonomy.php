@@ -22,10 +22,11 @@
 	$sml_header_photo = $header_photo['sizes']['feature'];
 	$lrg_header_photo = $header_photo['sizes']['page-header'];
 	$header_copy = get_field('category_copy', $taxonomy.'_'.$term_id);
+	$show = get_field('show_photo',  $taxonomy.'_'.$term_id);
 ?>
 <!--Page Header-->
 <div class="page-header">
-	<?php if($header_photo && $header_copy) { ?>
+	<?php if($header_photo && $header_copy && $show) { ?>
 		<div class="container">
 			<div class="cat-header">
 				<img src="<?php echo $sml_header_photo ?>" class="cat-header-photo">
@@ -39,12 +40,12 @@
 			</div>
 		</div>
 	<?php } ?>
-	<?php if($header_photo && !$header_copy) { ?>
+	<?php if($header_photo && !$header_copy && $show) { ?>
 		<div class="container">
 			<img src="<?php echo $lrg_header_photo; ?>" alt="<?php the_title(); ?>" class="full-cat-header">
 		</div>
 	<?php } ?>
-	<?php if(!$header_photo && $header_copy) { ?>
+	<?php if($header_copy && $show == 0) { ?>
 	<div class="container">
 		<p class="header-copy">
 			<?php

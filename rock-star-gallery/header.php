@@ -18,10 +18,15 @@
 		</div>
 	</div>
 	<header>
-		<a href="#" class="site-logo">
+		<a href="<?php bloginfo('url'); ?>" class="site-logo">
 			<?php include 'img/logo-rockstar.svg' ?>
 		</a>
 		<nav class="nav-flex">
+			<?php
+				$c_menu = get_nav_menu('celebrity');
+				$p_menu = get_nav_menu('photograhy');
+				$co_menu = get_nav_menu('collectibles');
+			?>
 			<form class="search-bar">
 				<div class="search-input">
 					<input type="text" class="search-text" />
@@ -30,73 +35,46 @@
 			</form>
 			<ul class="main-nav">
 				<li>
-					<a href="#" class="main-nav-item">CELEBRITY ARTISTS</a>
-					<ul class="sub-nav-list">
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-					</ul>
+					<a href="<?php bloginfo('url'); ?>/celebrity-artists" class="main-nav-item">CELEBRITY ARTISTS</a>
+					<?php if( count( $c_menu ) ) : ?>
+						<ul class="sub-nav-list">
+							<?php foreach($c_menu as $item) : ?>
+								<li class="sub-nav-list-item">
+									<a href="<?php echo $item->url; ?>" title="<?php echo $item->title; ?>">
+									<?php echo $item->title; ?>
+									</a>
+								</li>
+							<?php endforeach; ?>
+						</ul>
+					<?php endif; ?>
 				</li>
 				<li>
-					<a href="#" class="main-nav-item">Fine Photography</a>
-					<ul class="sub-nav-list">
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-					</ul>
+					<a href="<?php bloginfo('url'); ?>/fine-photography" class="main-nav-item">Fine Photography</a>
+					<?php if( count( $p_menu ) ) : ?>
+						<ul class="sub-nav-list">
+							<?php foreach($p_menu as $item) : ?>
+								<li class="sub-nav-list-item">
+									<a href="<?php echo $item->url; ?>" title="<?php echo $item->title; ?>">
+									<?php echo $item->title; ?>
+									</a>
+								</li>
+							<?php endforeach; ?>
+						</ul>
+					<?php endif; ?>
 				</li>
 				<li>
-					<a href="#" class="main-nav-item">Collectibles</a>
-					<ul class="sub-nav-list">
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-						<li class="sub-nav-list-item">
-							<a href="#">Fine Photography</a>
-						</li>
-					</ul>
+					<a href="<?php bloginfo('url'); ?>/collectibles" class="main-nav-item">Collectibles</a>
+					<?php if( count( $co_menu ) ) : ?>
+						<ul class="sub-nav-list">
+							<?php foreach($co_menu as $item) : ?>
+								<li class="sub-nav-list-item">
+									<a href="<?php echo $item->url; ?>" title="<?php echo $item->title; ?>"">
+									<?php echo $item->title; ?>
+									</a>
+								</li>
+							<?php endforeach; ?>
+						</ul>
+					<?php endif; ?>
 				</li>
 			</ul>
 		</nav>
@@ -107,29 +85,29 @@
 		</div>
 		<nav class="secondary-nav">
 			<ul class="secondary-nav-list">
-				<li><a href="#" class="secondary-nav-item">Featured Collections</a></li>
-				<li><a href="#" class="secondary-nav-item">Gallery</a></li>
-				<li><a href="#" class="secondary-nav-item">Press</a></li>
-				<li><a href="#" class="secondary-nav-item">Contact Us</a></li>
+				<li><a href="<?php bloginfo('url'); ?>/blog" class="secondary-nav-item">Blog</a></li>
+				<li><a href="<?php bloginfo('url'); ?>/featured-collections" class="secondary-nav-item">Featured Collections</a></li>
+				<li><a href="<?php bloginfo('url'); ?>/gallery" class="secondary-nav-item">Gallery</a></li>
+				<li><a href="<?php bloginfo('url'); ?>/testimonials" class="secondary-nav-item">Testimonials</a></li>
 			</ul>
 			<ul class="social-nav">
 				<li>
-					<a href="#" class="social-icon">
+					<a href="<?php the_field('facebook', 16) ?>" class="social-icon">
 						<?php include 'img/icon-socialMedia--facebook.svg' ?>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="social-icon">
+					<a href="<?php the_field('twitter', 16) ?>" class="social-icon">
 						<?php include 'img/icon-socialMedia--twitter.svg' ?>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="social-icon">
+					<a href="<?php the_field('instagram', 16) ?>" class="social-icon">
 						<?php include 'img/icon-socialMedia--instagram.svg' ?>
 					</a>
 				</li>
 				<li>
-					<a href="#" class="social-icon">
+					<a href="<?php the_field('youtube', 16) ?>" class="social-icon">
 						<?php include 'img/icon-socialMedia--youtube.svg' ?>
 					</a>
 				</li>

@@ -18,6 +18,7 @@
 #menu-users > a,
 #menu-tools > a,
 #toplevel_page_wpcf7 > a,
-.hide-if-no-js > a {
+.hide-if-no-js > a,
+#toplevel_page_edit-post_type-acf-field-group > a {
 	opacity: 0.3;
 }

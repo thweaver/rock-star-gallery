@@ -53,12 +53,29 @@ function get_parent_slug() {
 
 
 function wpb_custom_new_menu() {
-  register_nav_menu('top-menu',__( 'Top Menu' ));
-  register_nav_menu('sub-menu',__( 'Sub Menu' ));
+  register_nav_menu('celebrity',__( 'Celebrity Artists' ));
+  register_nav_menu('photograhy',__( 'Fine Photography' ));
+  register_nav_menu('collectibles',__( 'Collectibles' ));
 }
-add_action( 'init', 'wpb_custom_new_menu' );
-
-
+function get_nav_menu( $menu_slug ) {
+	$menu_locs = get_nav_menu_locations();
+	$menu_items = wp_get_nav_menu_items($menu_locs[$menu_slug]);
+	$nav_items = array();
+	$sub_nav_items = array();
+	foreach( $menu_items as $item ) {
+		if( $item->menu_item_parent) {
+			$sub_nav_items[] = $item;
+		} else {
+			$nav_items[$item->ID] = $item;
+			$nav_items[$item->ID]->sub_nav = array();
+		}
+	}
+	foreach( $sub_nav_items as $item ) {
+		$nav_items[$item->menu_item_parent]->sub_nav[] = $item;
+	}
+	
+	return $nav_items;
+}
 
 /*==============================================================================
 Pagination

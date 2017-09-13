@@ -18,10 +18,11 @@
 	$page_items = get_field('page_items');
 	$product_cat = get_field('product_category');
 	$post_type = get_field('product_category_2');
+	$show = get_field('show_photo');
 ?>
 <!--Page Header-->
 <div class="page-header">
-	<?php if($header_photo && $header_copy) { ?>
+	<?php if($header_photo && $header_copy && $show) { ?>
 		<div class="container">
 			<div class="cat-header">
 				<img src="<?php echo $sml_header_photo ?>" class="cat-header-photo">
@@ -35,12 +36,12 @@
 			</div>
 		</div>
 	<?php } ?>
-	<?php if($header_photo && !$header_copy) { ?>
+	<?php if($header_photo && !$header_copy && $show) { ?>
 		<div class="container">
 			<img src="<?php echo $lrg_header_photo; ?>" alt="<?php the_title(); ?>" class="full-cat-header">
 		</div>
 	<?php } ?>
-	<?php if(!$header_photo && $header_copy) { ?>
+	<?php if($header_copy && $show == 0) { ?>
 	<div class="container">
 		<p class="header-copy">
 			<?php

@@ -393,7 +393,7 @@ Secondary Nav
 	text-transform: uppercase;
 	color: $light-grey;
 	font-size: $font-small;
-	padding: 0 em(20);
+	padding: 0 em(12);
 	@media (max-width: $bp-laptop) {
 		display: block;
 		border-bottom: solid 1px $nav-bg;
