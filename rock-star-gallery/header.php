@@ -89,6 +89,7 @@
 				<li><a href="<?php bloginfo('url'); ?>/featured-collections" class="secondary-nav-item">Featured Collections</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/gallery" class="secondary-nav-item">Gallery</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/testimonials" class="secondary-nav-item">Testimonials</a></li>
+				<li><a href="<?php bloginfo('url'); ?>/testimonials" class="secondary-nav-item">Customer Service</a></li>
 			</ul>
 			<ul class="social-nav">
 				<li>
