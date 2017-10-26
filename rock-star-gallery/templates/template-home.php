@@ -118,7 +118,7 @@
 				<h2 class="yellow-title centered"><?php the_field('about_headline'); ?></h2>
 				<p class="callout">
 					<?php
-						echo mb_strimwidth($home_copy, 0, 500, "...<a href='#js-more' data-type='inline' class='venobox'>Read More</a>");
+						echo mb_strimwidth($home_copy, 0, 500, "...<a href='#js-more' data-type='inline' class='venobox read-more'>Read More</a>");
 					?>
 				</p>
 				<div class="more-content" id="js-more">

@@ -29,7 +29,7 @@
 				<div class="cat-header-copy">
 					<p>
 						<?php
-							echo mb_strimwidth($header_copy, 0, 900, "...<a href='#js-more' data-type='inline' class='venobox'>Read More</a>");
+							echo mb_strimwidth($header_copy, 0, 900, "...<a href='#js-more' data-type='inline' class='venobox read-more'>Read More</a>");
 						?>
 					</p>
 				</div>
@@ -45,7 +45,7 @@
 	<div class="container">
 		<p class="header-copy">
 			<?php
-				echo mb_strimwidth($header_copy, 0, 900, "...<a href='#js-more' data-type='inline' class='venobox'>Read More</a>");
+				echo mb_strimwidth($header_copy, 0, 900, "...<a href='#js-more' data-type='inline' class='venobox read-more'>Read More</a>");
 			?>
 		</p>
 	</div>
@@ -82,7 +82,10 @@
     	<?php if($cat_image) { ?>
     	<img src="<?php echo $cat_image; ?>" alt="<?php echo $category->name; ?>">
     	<?php } ?>
-    	<?php if(!$cat_image) { ?>
+    	<?php if($cat_header_photo) { ?>
+    	<img src="<?php echo $cat_sml_header_photo; ?>" alt="<?php echo $category->name; ?>">
+    	<?php } ?>
+    	<?php if(!$cat_image && !$cat_sml_header_photo) { ?>
     	<img src="<?php bloginfo('template_url'); ?>/img/default-thumb.png" alt="<?php echo $category->name; ?>">
     	<?php } ?>
     </a>

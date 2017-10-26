@@ -26,3 +26,8 @@ a {
 		padding: em(15);
 	}
 }
+.read-more {
+	color: $gold !important;
+	text-decoration: underline;
+	pointer: cursor !important;
+}

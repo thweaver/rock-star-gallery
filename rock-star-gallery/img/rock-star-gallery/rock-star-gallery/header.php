@@ -7,7 +7,7 @@
 		<meta name="format-detection" content="telephone=no">
 		<meta name="description" content="">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<link href="<?php bloginfo('template_url'); ?>/css/main.min.css?v=4" rel="stylesheet">
+		<link href="<?php bloginfo('template_url'); ?>/css/main.min.css?v=2" rel="stylesheet">
 		<script src="<?php bloginfo('template_url'); ?>/js/modernizr.min.js"></script>
 		<?php wp_head(); ?>
 	</head>
@@ -85,11 +85,10 @@
 		</div>
 		<nav class="secondary-nav">
 			<ul class="secondary-nav-list">
-				<!-- <li><a href="<?php bloginfo('url'); ?>/blog" class="secondary-nav-item">Blog</a></li> -->
+				<li><a href="<?php bloginfo('url'); ?>/blog" class="secondary-nav-item">Blog</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/featured-collections" class="secondary-nav-item">Featured Collections</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/gallery" class="secondary-nav-item">Gallery</a></li>
 				<li><a href="<?php bloginfo('url'); ?>/testimonials" class="secondary-nav-item">Testimonials</a></li>
-				<li><a href="<?php bloginfo('url'); ?>/customer-service" class="secondary-nav-item">Customer Service</a></li>
 			</ul>
 			<ul class="social-nav">
 				<li>

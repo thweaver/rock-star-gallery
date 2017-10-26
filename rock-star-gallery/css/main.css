@@ -543,6 +543,12 @@ a {
   }
 }
 
+.read-more {
+  color: #debf35 !important;
+  text-decoration: underline;
+  pointer: cursor !important;
+}
+
 .lt-ie9 .loader {
   display: none;
 }
