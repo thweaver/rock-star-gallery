@@ -27,7 +27,9 @@
 	</div>
 </div>
 
+
 <div class="container flex-container flex-top-center container--page">
+
 	<div class="product-slider js-slider">
 		<a href="<?php echo $item_image_lrg ?>" class="venobox" data-gall="product">
 			<img src="<?php echo $item_image_thumb ?>" alt="<?php the_title(); ?>">
@@ -60,9 +62,18 @@
 
 		</p>
 		<?php } ?>
-		<a href="#" class="button button--full"><span>Request price</span></a>
+		<a href="#js-price" data-type='inline' class="button button--full venobox"><span>Request price</span></a>
 	</div>
-
+	<div class="more-content" id="js-price">
+		<div class="product-form">
+				<h2>
+					<span>Request Price</span>
+				</h2>
+			<div class="product-form-container">
+				<?php echo do_shortcode( '[contact-form-7 id="6951" title="Product"]' ); ?>
+			</div>
+		</div>
+	</div>
 	<?php if($item_info) { ?>
 	<div class="more-content" id="js-more">
 		<p>

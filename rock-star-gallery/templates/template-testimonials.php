@@ -26,6 +26,12 @@
 		 	<?php endif; ?>
 		</div>
 		<div class="testimonial-form">
+				<h2>
+					<span>Leave a testimonial!</span>
+				</h2>
+			<div class="testimonial-form-container">
+				<?php echo do_shortcode( '[contact-form-7 id="263" title="Testimonial"]' ); ?>
+			</div>
 		</div>
 	</div>
 	<div class="post-sub-title">

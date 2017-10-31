@@ -66,7 +66,7 @@
 	<div class="page-title-container page-title-container--alt-container">
 		<div class="page-title">
 			<h3>
-				<span>Whats New</span>
+				<span>Featured Collections</span>
 			</h3>
 		</div>
 	</div>

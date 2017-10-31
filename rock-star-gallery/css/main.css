@@ -1777,6 +1777,42 @@ Hamburger
   background-color: #800000;
 }
 
+.newsletter-form {
+  width: 100%;
+}
+
+.newsletter-form input[type="submit"] {
+  padding: 15px;
+  outline: 0;
+  margin: 3px;
+  width: 100%;
+  text-align: center;
+  background: #800000;
+  color: white;
+  border: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+  border: solid 1px #c0c0c0;
+  padding: 10px;
+  outline: 0;
+  margin: 3px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.newsletter-form h2 {
+  color: #292929;
+  text-align: left;
+  border-bottom: solid 2px #dedede;
+  padding-bottom: 25px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+
 .featured-artists {
   width: 100%;
   background-color: rgba(255, 255, 255, 0.3);
@@ -2256,22 +2292,34 @@ Hamburger
   min-height: 100%;
   margin-bottom: 3.125em;
   display: block;
-  background: #c0c0c0;
+  background: #cdcdcd;
 }
 @media (max-width: 975px) {
   .testimonial-form {
     width: 100%;
     font-size: 90%;
     order: 2;
-    min-height: 60px;
     flex-grow: 1;
     margin-bottom: 1.875em;
   }
 }
 
+.testimonial-form-container {
+  padding: 1.25em;
+}
+
+.testimonial-form h2 {
+  color: #292929;
+  text-align: left;
+  border-bottom: solid 2px #dedede;
+  padding: 25px;
+  font-weight: 400;
+}
+
 .testimonial-container {
   flex: 1;
   padding-right: 2.5em;
+  font-size: 90%;
 }
 @media (max-width: 975px) {
   .testimonial-container {
@@ -2279,6 +2327,34 @@ Hamburger
     padding-right: 0;
     flex: 0 0 100%;
   }
+}
+
+input.testimonial-cf7[type="text"],
+input.testimonial-cf7[type="email"],
+textarea.testimonial-cf7 {
+  border: solid 1px #c0c0c0;
+  padding: 10px;
+  outline: 0;
+  margin: 3px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.testimonial-form input[type="submit"] {
+  padding: 15px;
+  outline: 0;
+  margin: 3px;
+  width: 100%;
+  text-align: center;
+  background: #800000;
+  color: white;
+  border: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+}
+
+div.wpcf7-response-output {
+  background: white;
 }
 
 .related-content {
@@ -2415,6 +2491,32 @@ Hamburger
   padding-bottom: 1.5625em;
   margin-bottom: 1.5625em;
   border-bottom: solid 1px #c0c0c0;
+}
+
+.product-form {
+  width: 100%;
+}
+
+.product-form input[type="submit"] {
+  padding: 15px;
+  outline: 0;
+  margin: 3px;
+  width: 100%;
+  text-align: center;
+  background: #800000;
+  color: white;
+  border: 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+}
+
+.product-form h2 {
+  color: #292929;
+  text-align: left;
+  border-bottom: solid 2px #dedede;
+  padding-bottom: 25px;
+  font-weight: 400;
+  margin-bottom: 25px;
 }
 
 .contact-form {
