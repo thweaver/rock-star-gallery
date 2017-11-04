@@ -22,7 +22,7 @@
 <div class="page-title-container">
 	<div class="page-title">
 		<h1>
-			<span><?php echo $term->name ?></span>
+			<span><a href="<?php echo get_term_link($term) ?>"><?php echo $term->name ?></a></span>
 		</h1>
 	</div>
 </div>
@@ -47,7 +47,7 @@
 	<div class="product-info">
 		<div class="product-title">
 			<h2><?php the_title(); ?></h2>
-			<h3>By: <?php echo $term->name ?></h3>
+			<h3>By: <a href="<?php echo get_term_link($term) ?>"><?php echo $term->name ?></a></h3>
 			<?php if(get_field('item_id')) { ?>
 			<h4>Item ID: <?php the_field('item_id') ?></h4>
 			<?php } ?>
@@ -62,7 +62,9 @@
 
 		</p>
 		<?php } ?>
-		<a href="#js-price" data-type='inline' class="button button--full venobox"><span>Request price</span></a>
+		<a href="#js-price?product=<?php echo $term->name ?>%20<?php the_title(); ?>" data-type='inline' class="button button--full venobox"><span>Request price</span></a>
+	</div>
+	<div class="wpcf7-response-output">
 	</div>
 	<div class="more-content" id="js-price">
 		<div class="product-form">

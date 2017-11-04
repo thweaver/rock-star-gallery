@@ -11,7 +11,15 @@
 							<a href="<?php the_field('facebook', 16) ?>" target="_blank"><?php include 'img/icon-socialMedia--facebook.svg' ?></a>
 							<a href="<?php the_field('twitter', 16) ?>" target="_blank"><?php include 'img/icon-socialMedia--twitter.svg' ?></a>
 							<a href="<?php the_field('instagram', 16) ?>" target="_blank"><?php include 'img/icon-socialMedia--instagram.svg' ?></a>
+
 							<a href="<?php the_field('youtube', 16) ?>" target="_blank"><?php include 'img/icon-socialMedia--youtube.svg' ?></a>
+
+							<a href="https://plus.google.com/b/115124860256795374828/+Rockstargallery?hl=en&gl=us&pageId=115124860256795374828" target="_blank"><?php include 'img/google-plus.svg' ?></a>
+
+							<a href="http://pinterest.com/thepollyk01?" target="_blank"><?php include 'img/pinterest.svg' ?></a>
+
+							<a href="https://www.tumblr.com/blog/rockstargallery?" target="_blank"><?php include 'img/tumblr.svg' ?></a>
+
 							<a href="mailto:<?php echo antispambot( $email ) ?>" target="_blank"><?php include 'img/icon-socialMedia--email.svg' ?></a>
 						</div>
 					</div>
@@ -21,6 +29,7 @@
 							<?php the_field('address', 16); ?>
 
 						</p>
+						<p class="footer-contact-links"><a href="<?php bloginfo('url'); ?>/press">Press</a><span>|</span><a href="<?php bloginfo('url'); ?>/contact">Contact</a></p>
 					</div>
 				</div>
 			</div>

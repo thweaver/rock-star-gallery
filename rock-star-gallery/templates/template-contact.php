@@ -36,6 +36,7 @@
 			</h4>
 		</div>
 		<div class="contact-form">
+			<?php echo do_shortcode( '[contact-form-7 id="6971" title="Contact"]' ); ?>
 		</div>
 		
 	</div>

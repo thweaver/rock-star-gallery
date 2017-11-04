@@ -48,6 +48,7 @@ footer {
 			height: 100%;
 			width: auto;
 			transition: all .3s;
+			fill: white !important;
 			path {
 				fill: $dark-red;
 				transition: fill .3s;
@@ -85,4 +86,13 @@ footer {
 	color: $text-color;
 	margin-top: em(20);
 	font-weight: $font-light;
+}
+.footer-contact-links {
+	color: $dark-red;
+	a {
+		color: $dark-red;
+	}
+	span {
+		padding: 0 10px;
+	}
 }

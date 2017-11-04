@@ -7,7 +7,7 @@
 		<meta name="format-detection" content="telephone=no">
 		<meta name="description" content="">
 		<link rel="apple-touch-icon" href="apple-touch-icon.png">
-		<link href="<?php bloginfo('template_url'); ?>/css/main.min.css?v=4" rel="stylesheet">
+		<link href="<?php bloginfo('template_url'); ?>/css/main.min.css?v=6" rel="stylesheet">
 		<script src="<?php bloginfo('template_url'); ?>/js/modernizr.min.js"></script>
 		<?php wp_head(); ?>
 	</head>
@@ -27,12 +27,7 @@
 				$p_menu = get_nav_menu('photograhy');
 				$co_menu = get_nav_menu('collectibles');
 			?>
-			<form class="search-bar">
-				<div class="search-input">
-					<input type="text" class="search-text" />
-					<?php include 'img/icon-search.svg' ?>
-				</div>
-			</form>
+			<?php get_search_form(); ?>
 			<ul class="main-nav">
 				<li>
 					<a href="<?php bloginfo('url'); ?>/celebrity-artists" class="main-nav-item">CELEBRITY ARTISTS</a>

@@ -69,6 +69,13 @@
 	padding-bottom: em(25);
 	margin-bottom: em(25);
 	border-bottom: solid 1px $light-grey;
+	a {
+		color: $gold;
+		text-decoration: underline;
+		&:hover {
+			color: white;
+		}
+	}
 }
 .product-form {
 	width: 100%;

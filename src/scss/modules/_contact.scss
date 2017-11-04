@@ -1,7 +1,5 @@
 .contact-form {
 	width: 50%;
-	background: $grey;
-	height: 400px;
 	@media (max-width: $bp-laptop) {
 		width: 100%;
 		font-size: 90%;
@@ -105,4 +103,11 @@
 			fill: $red;
 		}
 	}
+}
+.product-form .wpcf7-response-output {
+	position: fixed;
+	margin: 0 !important;
+	top: 0;
+	left: 0;
+	width: 100%;
 }

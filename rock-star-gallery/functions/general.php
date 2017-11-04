@@ -77,6 +77,44 @@ function get_nav_menu( $menu_slug ) {
 	return $nav_items;
 }
 wpb_custom_new_menu();
+
+
+/*==============================================================================
+Custom Title and Meta Inserts
+==============================================================================*/
+function tfg_title(){
+	global $tfg_page;
+	if(!empty($tfg_page['title'])){
+		echo $tfg_page['title'];
+	} else {
+		global $page, $paged, $post;
+		if ($paged >= 2 || $page >= 2){
+			echo sprintf( __('Page %s', 'tfg'), max($paged, $page)).' | ';
+		}
+		wp_title('|', true, 'right');
+		bloginfo();
+	}
+}
+function tfg_description(){
+	global $tfg_page;
+	$excerpt = wp_trim_excerpt();
+	if(!empty($tfg_page['description'])){
+		echo htmlspecialchars($tfg_page['description']);
+	} else if(!empty($excerpt)){
+		echo htmlspecialchars($excerpt);
+	} else {
+		echo htmlspecialchars(get_bloginfo('description'));
+	}
+}
+function tfg_image(){
+	global $tfg_page;
+	if(!empty($tfg_page['image'])){
+		echo $tfg_page['image'];
+	} else {
+		echo bloginfo('template_url').'/img/share.png?v=3';
+	}
+}
+
 /*==============================================================================
 Pagination
 ==============================================================================*/
@@ -906,7 +944,6 @@ new acf_field_taxonomy_chooser();
  * provide it for us.
  */
 add_theme_support( 'title-tag' );;
-
 
 
 

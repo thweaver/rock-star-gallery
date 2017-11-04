@@ -22,6 +22,7 @@
 ?>
 <!--Page Header-->
 <div class="page-header">
+
 	<?php if($header_photo && $header_copy && $show) { ?>
 		<div class="container">
 			<div class="cat-header">

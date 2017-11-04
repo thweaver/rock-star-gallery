@@ -63,7 +63,7 @@ body {
   font-size: 100%;
   overflow-x: hidden;
   line-height: 1.5;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   height: 100%;
 }
 
@@ -547,6 +547,11 @@ a {
   color: #debf35 !important;
   text-decoration: underline;
   pointer: cursor !important;
+}
+
+.small-span {
+  color: #292929;
+  font-size: 14px;
 }
 
 .lt-ie9 .loader {
@@ -1196,7 +1201,7 @@ header:before {
   header {
     display: block;
     min-height: 5.9375em;
-    height: auto;
+    height: 0;
     background: none;
     position: absolute;
     top: 0;
@@ -1218,17 +1223,22 @@ header:before {
 @media (max-width: 975px) {
   .nav-flex {
     transform: translateX(101%);
-    transition: transform .3s;
     display: block;
     width: 100%;
     height: auto;
     z-index: 2;
+    transition: transform .3s, visibility 0s .3s, width 0s .3s;
+    visibility: hidden;
+    width: 0;
   }
 }
 
 @media (max-width: 975px) {
   .js-nav-open .nav-flex {
     transform: translateX(0);
+    transition: transform .3s, visibility 0s 0s, width 0s 0s;
+    visibility: visible;
+    width: 100%;
   }
 }
 
@@ -1521,14 +1531,19 @@ Secondary Nav
     border-bottom: 0;
     height: auto;
     transform: translateX(101%);
-    transition: transform .3s;
     display: block;
+    transition: transform .3s, visibility 0s .3s, width 0s .3s;
+    visibility: hidden;
+    width: 0;
   }
 }
 
 @media (max-width: 975px) {
   .js-nav-open .secondary-nav {
     transform: translateX(0);
+    transition: transform .3s, visibility 0s 0s, width 0s 0s;
+    visibility: visible;
+    width: 100%;
   }
 }
 
@@ -1941,6 +1956,10 @@ Hamburger
   display: block;
   background-color: #1d1d1d;
 }
+.page-title h1 span a, .page-title h2 span a, .page-title h3 span a {
+  text-decoration: none;
+  color: #dedede;
+}
 .page-title h1 {
   font-size: 1.5em;
 }
@@ -2179,7 +2198,9 @@ Hamburger
   left: 0;
   right: 0;
   top: 0;
-  position: fixed;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   z-index: 9999;
   background: black;
   background: radial-gradient(ellipse at center, #292929 0%, black 100%);
@@ -2340,7 +2361,7 @@ textarea.testimonial-cf7 {
   font-size: 14px;
 }
 
-.testimonial-form input[type="submit"] {
+input[type="submit"] {
   padding: 15px;
   outline: 0;
   margin: 3px;
@@ -2492,6 +2513,13 @@ div.wpcf7-response-output {
   margin-bottom: 1.5625em;
   border-bottom: solid 1px #c0c0c0;
 }
+.product-title a {
+  color: #debf35;
+  text-decoration: underline;
+}
+.product-title a:hover {
+  color: white;
+}
 
 .product-form {
   width: 100%;
@@ -2521,8 +2549,6 @@ div.wpcf7-response-output {
 
 .contact-form {
   width: 50%;
-  background: #3d3d3d;
-  height: 400px;
 }
 @media (max-width: 975px) {
   .contact-form {
@@ -2636,6 +2662,14 @@ div.wpcf7-response-output {
   fill: #800000;
 }
 
+.product-form .wpcf7-response-output {
+  position: fixed;
+  margin: 0 !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 footer {
   width: 100%;
   border-top: solid 5px black;
@@ -2695,6 +2729,7 @@ footer .container {
   height: 100%;
   width: auto;
   transition: all .3s;
+  fill: white !important;
 }
 .footer-social-media a svg path {
   fill: #5c0000;
@@ -2731,6 +2766,16 @@ footer .container {
   color: #292929;
   margin-top: 1.25em;
   font-weight: 300;
+}
+
+.footer-contact-links {
+  color: #5c0000;
+}
+.footer-contact-links a {
+  color: #5c0000;
+}
+.footer-contact-links span {
+  padding: 0 10px;
 }
 
 .post-block {

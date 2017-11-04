@@ -29,7 +29,7 @@ header {
 	@media (max-width: $bp-laptop) {
 		display: block;
 		min-height: em(95);
-		height: auto;
+		height:0;
 		background: none;
 		position: absolute;
 		top: 0;
@@ -48,16 +48,22 @@ header {
 	position: relative;
 	@media (max-width: $bp-laptop) {
 		transform: translateX(101%);
-		transition: transform .3s;
+		
 		display: block;
 		width: 100%;
 		height: auto;
 		z-index: 2;
+		transition: transform .3s, visibility 0s .3s, width 0s .3s;
+		visibility: hidden;
+		width: 0;
 	}
 }
 .js-nav-open .nav-flex {
 	@media (max-width: $bp-laptop) {
 		transform: translateX(0);
+		transition: transform .3s, visibility 0s 0s, width 0s 0s;
+		visibility: visible;
+		width: 100%;
 	}
 }
 .main-nav {
@@ -339,13 +345,18 @@ Secondary Nav
 		border-bottom: 0;
 		height: auto;
 		transform: translateX(101%);
-		transition: transform .3s;
 		display: block;
+		transition: transform .3s, visibility 0s .3s, width 0s .3s;
+		visibility: hidden;
+		width: 0;
 	}
 }
 .js-nav-open .secondary-nav {
 	@media (max-width: $bp-laptop) {
 		transform: translateX(0);
+		transition: transform .3s, visibility 0s 0s, width 0s 0s;
+		visibility: visible;
+		width: 100%;
 	}
 }
 .secondary-nav-list {
